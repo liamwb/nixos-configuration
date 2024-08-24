@@ -20,6 +20,12 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.git = {
+    enable = true;
+    userName = "liamwb";
+    userEmail = "liam.woodbaker@gmail.com";
+  };
+
   home.packages = with pkgs; [
     firefox
     chromium

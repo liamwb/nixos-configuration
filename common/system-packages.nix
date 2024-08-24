@@ -15,7 +15,6 @@
   libsForQt5.kwallet
   vscode
   (python311.withPackages(ps: with ps; [ networkx matplotlib numpy notebook]))
-  git
   nix-search-cli
   protonup
   nil  # nix language server for nix ide    

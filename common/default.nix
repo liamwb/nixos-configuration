@@ -57,7 +57,6 @@
   };
 
   # List services that you want to enable:
-  programs.git.enable = true;
 
   nix.optimise.automatic = true;
   nix.gc = {
