@@ -37,7 +37,7 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   };
   # This fixes the unpopulated MIME menus
-  environment.etc."/xdg/menus/plasma-applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  # environment.etc."/xdg/menus/plasma-applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -91,7 +91,7 @@
     extraPackages = with pkgs; [ qt6.qt5compat ];
     theme = "where_is_my_sddm_theme";
   };
-  # services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
   programs.hyprland.enable = true;
 
   xdg.portal.enable = true;

@@ -13,6 +13,7 @@
   libsForQt5.bismuth
   libsForQt5.qt5.qtwayland
   libsForQt5.kwallet
+  libsForQt5.kwalletmanager
   vscode
   (python311.withPackages(ps: with ps; [ networkx matplotlib numpy notebook]))
   nix-search-cli
