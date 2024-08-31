@@ -356,5 +356,7 @@
     extraConfigLuaPost = ''
       -- vim: ts=2 sts=2 sw=2 et
     '';
+
+    extraPython3Packages = p: [p.numpy p.matplotlib p.progress p.tqdm ];
   };
 }

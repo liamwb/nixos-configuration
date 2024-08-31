@@ -19,8 +19,14 @@
   stylix = {
     targets = {
       # zathura.enable = false;
+      kde.enable = false;
     };
   };
+
+  # stop git from freezing system
+  # home.sessionVariables = {
+  #   SSH_ASKPASS = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
+  # };
 
 
   # This value determines the Home Manager release that your

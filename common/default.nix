@@ -36,8 +36,12 @@
   # enable polkit so i can save as sudo in hyprland
   security.polkit.enable = true;
   # auto unlock KDE wallet
-  security.pam.services.hyprland.kwallet.enable = true;
+  # security.pam.services.hyprland.kwallet.enable = true;
 
+  # gnome-keyring services
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.hyprland.enableGnomeKeyring = true;
+  programs.seahorse.enable = true;
   ######### End Security ########
 
   # Input manager
@@ -64,4 +68,5 @@
     dates = "daily";
     options = "--delete-older-than 5d";
   };
+
 }

@@ -101,7 +101,7 @@
 
         nil-ls.enable = true;  # LSP for the nix language
 
-        pylyzer.enable = true;
+        pyright.enable = true;
         # Some languages (like typscript) have entire language plugins that can be useful:
         #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
         #

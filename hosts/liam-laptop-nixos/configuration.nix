@@ -20,6 +20,9 @@
         showSessionsByDefault = "true";
       };
     })
+    pkgs.libsForQt5.ksshaskpass
+    # pkgs.libsForQt5.polkit-kde-agent
+    pkgs.kdePackages.polkit-kde-agent-1
   ];
 
   users.users.liamwb = {
@@ -91,7 +94,7 @@
     extraPackages = with pkgs; [ qt6.qt5compat ];
     theme = "where_is_my_sddm_theme";
   };
-  services.xserver.desktopManager.plasma5.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
   programs.hyprland.enable = true;
 
   xdg.portal.enable = true;
@@ -145,6 +148,12 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  # Fix git freezing the system
+  # programs.ssh = {
+  #   enableAskPassword = true;
+  #   askPassword = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
+  # };
+  #
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 29999 ];
   # networking.firewall.allowedUDPPorts = [ 29999 ];

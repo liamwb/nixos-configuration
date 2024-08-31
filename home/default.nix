@@ -24,6 +24,11 @@
     enable = true;
     userName = "liamwb";
     userEmail = "liam.woodbaker@gmail.com";
+    extraConfig = {
+      credential.helper = "${
+          pkgs.git.override { withLibsecret = true; }
+        }/bin/git-credential-libsecret";
+    };
   };
 
   home.packages = with pkgs; [
@@ -60,6 +65,8 @@
     zathura
     base16-schemes  # collection of colour schemes
     abiword
+    bottom
+    warp-terminal
   
     luajitPackages.jsregexp  # dependency for LuaSnips
     fd  # like find, nvim wants it
@@ -82,8 +89,9 @@
     grimblast
     xwaylandvideobridge
 
-    # kde packages 
-    kdePackages.dolphin
+    gnome.gnome-keyring
+    gnome.seahorse
+    libsecret
   ];
 
   home.shellAliases = {

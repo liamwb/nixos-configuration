@@ -2,7 +2,8 @@
 {
   programs.foot.settings = {
     main = {
-      dpi-aware = false;
+      dpi-aware = "yes";
+      font = "Fira Code:size=16";
     };
   };
 }

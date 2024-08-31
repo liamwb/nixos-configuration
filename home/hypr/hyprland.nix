@@ -29,12 +29,11 @@ in
       ];
 
       exec-once = [
-        "kwalletd5"
-        "lxsession"  # allows "save as sudo" in gui apps
+        "lxqt-policykit-agent"
         "mako"
         "nm-applet"
         "blueman-applet"
-        "hyprpaper -c ~/.config/hypr/hyprpaper.conf"  # set wallpaper
+        # "hyprpaper -c ~/.config/hypr/hyprpaper.conf"  # set wallpaper (stylix does this now)
         "waybar"
 # make sure that xdg-desktop-portal-hyprland can get the required variables on startup.
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP "
@@ -274,6 +273,9 @@ in
 
 # wifi menu with rofi (or anything rofi for that matter) should not tile
           "float,class:Rofi"
+# openssh authentication should float
+        "float,class:OpenSSH Authentication Passphrase request"
+        "float,class:org.kde.kwalletmanager5"
 
 # fix to allow XWayland to share windows with Wayland
           "opacity 0.0 override,class:^(xwaylandvideobridge)$"

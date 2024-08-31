@@ -15,11 +15,10 @@
   libsForQt5.kwallet
   libsForQt5.kwalletmanager
   vscode
-  (python311.withPackages(ps: with ps; [ networkx matplotlib numpy notebook]))
+  (python311.withPackages(ps: with ps; [ networkx matplotlib numpy notebook pynvim progress tqdm ]))
   nix-search-cli
   protonup
   nil  # nix language server for nix ide    
-  lxde.lxsession  # required to get polkit working on hyprland
   # things I needed to install to get nvim.kickstart working
   gcc
   unzip
