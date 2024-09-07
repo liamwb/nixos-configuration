@@ -277,6 +277,9 @@ in
         "float,class:OpenSSH Authentication Passphrase request"
         "float,class:org.kde.kwalletmanager5"
 
+# matplotlib should float
+        "float,class:Matplotlib"
+
 # fix to allow XWayland to share windows with Wayland
           "opacity 0.0 override,class:^(xwaylandvideobridge)$"
           "noanim,class:^(xwaylandvideobridge)$"

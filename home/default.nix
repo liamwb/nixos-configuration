@@ -31,6 +31,11 @@
     };
   };
 
+  # set default applications
+  xdg.mimeApps.defaultApplications = {
+    "application/pdf" = [ "zathura.desktop" ];
+  };
+
   home.packages = with pkgs; [
     firefox
     chromium

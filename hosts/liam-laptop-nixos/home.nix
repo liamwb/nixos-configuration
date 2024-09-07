@@ -8,6 +8,7 @@
   wayland.windowManager.hyprland.settings = {
     monitor =[
     "eDP-1,3840x2160@60,0x0,2"
+    " , preferred, auto, 1"  # add other monitors to the right at default res
     ];
 
     env = [

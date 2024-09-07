@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   
   environment.systemPackages = with pkgs; [
@@ -15,7 +15,16 @@
   libsForQt5.kwallet
   libsForQt5.kwalletmanager
   vscode
-  (python311.withPackages(ps: with ps; [ networkx matplotlib numpy notebook pynvim progress tqdm ]))
+  (python311.withPackages(ps: with ps; [ 
+    networkx 
+    matplotlib 
+    numpy 
+    notebook 
+    pynvim 
+    progress 
+    tqdm 
+    debugpy
+    ]))
   nix-search-cli
   protonup
   nil  # nix language server for nix ide    
