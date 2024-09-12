@@ -229,29 +229,6 @@
           desc = "Exit terminal mode";
         };
       }
-      # TIP: Disable arrow keys in normal mode
-      /*
-        {
-        mode = "n";
-        key = "<left>";
-        action = "<cmd>echo 'Use h to move!!'<CR>";
-        }
-        {
-        mode = "n";
-        key = "<right>";
-        action = "<cmd>echo 'Use l to move!!'<CR>";
-        }
-        {
-        mode = "n";
-        key = "<up>";
-        action = "<cmd>echo 'Use k to move!!'<CR>";
-        }
-        {
-        mode = "n";
-        key = "<down>";
-        action = "<cmd>echo 'Use j to move!!'<CR>";
-        }
-      */
       # Keybinds to make split navigation easier.
       #  Use CTRL+<hjkl> to switch between windows
       #
@@ -349,6 +326,19 @@
       if vim.g.have_nerd_font then
         require('nvim-web-devicons').setup {}
       end
+    '';
+
+    extraConfigLua = ''
+      vim.api.nvim_create_autocmd("FileType", {
+            pattern = "python",
+            callback = function()
+              vim.api.nvim_buf_set_keymap(0, 'n', '<leader>R', ':w<CR>:split term://python3 %<CR>', { 
+                noremap = true, 
+                silent = true,
+                desc = "Run Python File"
+                })
+            end,
+          })
     '';
 
     # The line beneath this is called `modeline`. See `:help modeline`

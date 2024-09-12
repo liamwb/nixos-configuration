@@ -10,8 +10,9 @@
     ./zathura
     ./wlogout
     ./foot
+    ./yazi.nix
   ];
-
+ 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "liamwb";
@@ -47,9 +48,7 @@
     foot  # terminal emulator
     steam
     discord
-    gotop # pretty system utilisation via console
-    neofetch
-    lf # terminal file manager
+    fastfetch
     lsd # ls with icons
     teams-for-linux
     onedrive
@@ -65,13 +64,14 @@
     slack
     jellyfin-media-player
     zoom
-    yazi
+    yazi  # terminal file manager
     obs-studio
-    zathura
+    zathura  # pdf viewer
+    feh  # image viewer
     base16-schemes  # collection of colour schemes
-    abiword
-    bottom
-    warp-terminal
+    softmaker-office
+    bottom  # perfomance info
+    warp-terminal  # grant's malware
   
     luajitPackages.jsregexp  # dependency for LuaSnips
     fd  # like find, nvim wants it
