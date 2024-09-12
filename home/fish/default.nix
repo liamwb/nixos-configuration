@@ -1,7 +1,7 @@
-{config, pkgs, ...}:
-
+{pkgs,...}:
 {
-  imports = [ ./starship.nix ];
+  # use starship prompt
+  # imports = [ ../starship ];
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -20,4 +20,8 @@
   };
 
   programs.yazi.enableFishIntegration = true;
+
+  home.packages = [
+    pkgs.fishPlugins.hydro
+  ];
 }
