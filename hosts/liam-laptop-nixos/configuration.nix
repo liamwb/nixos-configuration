@@ -20,9 +20,6 @@
         showSessionsByDefault = "true";
       };
     })
-    pkgs.libsForQt5.ksshaskpass
-    # pkgs.libsForQt5.polkit-kde-agent
-    pkgs.kdePackages.polkit-kde-agent-1
   ];
 
   users.users.liamwb = {
@@ -35,7 +32,7 @@
   # enable stylix
   stylix = {
     enable = true;
-    image = /home/liamwb/Wallpapers/john-towner-JgOeRuGD_Y4-unsplash.jpg;
+    image = /home/liamwb/Wallpapers/windows-error.jpg;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   };

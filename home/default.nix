@@ -41,7 +41,6 @@
     firefox
     chromium
     thunderbird
-    libsForQt5.qmltermwidget
     fish # friendly shell
     nerdfonts # nerd fonts for pretty shell
     starship # terminal customisation

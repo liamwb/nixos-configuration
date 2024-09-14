@@ -1,8 +1,8 @@
-{config, pkgs, ...}:
 {
   programs.zathura = {
     enable = true;
     options = {
+      selection-clipboard = "clipboard";  # paste with ctl+v
       recolor = true;
       # recolor-keephue = true;
       # COOURS MANAGED BY STYLIX

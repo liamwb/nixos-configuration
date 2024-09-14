@@ -8,12 +8,6 @@
   libsmbios  # dell fan control 
   tree
   gparted
-  libsForQt5.qt5ct
-  libsForQt5.qtstyleplugin-kvantum
-  libsForQt5.bismuth
-  libsForQt5.qt5.qtwayland
-  libsForQt5.kwallet
-  libsForQt5.kwalletmanager
   vscode
   (python311.withPackages(ps: with ps; [ 
     networkx 

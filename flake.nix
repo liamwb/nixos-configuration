@@ -12,16 +12,18 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
     stylix.url = "github:danth/stylix";
+    base16.url = "github:SenchoPens/base16.nix";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, ... }: {
+  outputs = { self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, base16, ... } @ inputs: {
 
-    nixosConfigurations.liam-laptop-nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./hosts/liam-laptop-nixos/configuration.nix
         nixos-hardware.nixosModules.dell-xps-15-9560
         stylix.nixosModules.stylix
+        base16.nixosModule
   
         home-manager.nixosModules.home-manager
         {
@@ -35,8 +37,14 @@
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+          };
         }
       ];
+      specialArgs = {
+        inherit inputs;
+      };
     };
   };
 }
