@@ -90,14 +90,14 @@
           enable = true;
         };
 
-        # ltex = {
-        #   enable = true;
-        #
-        #   settings = {
-        #     language = "en-AU";
-        #     checkFrequency = "save";
-        #   };
-        # };
+        ltex = {
+          enable = true;
+
+          settings = {
+            language = "en-AU";
+            checkFrequency = "save";
+          };
+        };
 
         nil-ls.enable = true;  # LSP for the nix language
 

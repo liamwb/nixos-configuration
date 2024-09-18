@@ -32,7 +32,7 @@
   # enable stylix
   stylix = {
     enable = true;
-    image = /home/liamwb/Wallpapers/windows-error.jpg;
+    image = /home/liamwb/Wallpapers/panes.jpg;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   };

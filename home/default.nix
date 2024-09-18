@@ -71,6 +71,7 @@
     softmaker-office
     bottom  # perfomance info
     warp-terminal  # grant's malware
+    smassh  # monkeytype tui
   
     luajitPackages.jsregexp  # dependency for LuaSnips
     fd  # like find, nvim wants it
