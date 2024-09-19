@@ -17,7 +17,7 @@
 
   outputs = { self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, base16, ... } @ inputs: {
 
-    nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem {
+    nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem { 
       system = "x86_64-linux";
       modules = [
         ./hosts/liam-laptop-nixos/configuration.nix
@@ -30,6 +30,35 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.liamwb = import ./hosts/liam-laptop-nixos/home.nix;
+          home-manager.backupFileExtension = "backup"; # create a backup on collision
+          home-manager.sharedModules = [
+            nixvim.homeManagerModules.nixvim
+          ];
+
+          # Optionally, use home-manager.extraSpecialArgs to pass
+          # arguments to home.nix
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+          };
+        }
+      ];
+      specialArgs = {
+        inherit inputs;
+      };
+    };
+
+    nixosConfigurations.liam-pc-nixos = inputs.nixpkgs.lib.nixosSystem { 
+      system = "x86_64-linux";
+      modules = [
+        ./hosts/liam-pc-nixos/configuration.nix
+        stylix.nixosModules.stylix
+        base16.nixosModule
+  
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.liamwb = import ./hosts/liam-pc-nixos/home.nix;
           home-manager.backupFileExtension = "backup"; # create a backup on collision
           home-manager.sharedModules = [
             nixvim.homeManagerModules.nixvim
