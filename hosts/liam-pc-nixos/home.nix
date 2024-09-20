@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{lib, ... }:
 
 {
   imports = [
@@ -6,14 +6,14 @@
   ];
   
   wayland.windowManager.hyprland.settings = {
-#    monitor =[
-#    "eDP-1,3840x2160@60,0x0,2"
-#    " , preferred, auto, 1"  # add other monitors to the right at default res
-#    ];
     monitor = [
     "DP-3, 1920x1080@165, 0x0, 1"
     "DP-2, 1920x1080@60, 1920x0, 1"
     ];
+
+    input = {
+      sensitivity = -0.5;
+    };
 
   };
 

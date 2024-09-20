@@ -76,7 +76,7 @@
     enable = true;
     image = /home/liamwb/Wallpapers/dark-cat-rosewater.png;
     polarity = "dark";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   };
 
   ######### Enable SDDM, Hyprland ###########
