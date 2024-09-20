@@ -32,5 +32,6 @@
   tree-sitter
   cargo
   go
+  kdePackages.okular
   ];
 }
