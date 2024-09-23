@@ -23,6 +23,14 @@
     };
   };
 
+  # set the font size and shell for foot (per-host because I want different font sizes on different hosts)
+  xdg.configFile."foot/foot.ini".text = ''
+    # -*- conf -*-
+
+    shell=fish
+    font=monospace:size=12
+  '';
+
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
