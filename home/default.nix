@@ -9,7 +9,6 @@
     ./nvim
     ./zathura
     ./wlogout
-    ./foot
     ./yazi.nix
   ];
  
