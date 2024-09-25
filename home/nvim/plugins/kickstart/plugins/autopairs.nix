@@ -6,7 +6,7 @@
       enable = true;
 
       settings = {
-        disable_filetype = [ "tex" ];
+        # disable_filetype = [ "tex" ];
       };
     };
 

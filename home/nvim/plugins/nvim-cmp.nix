@@ -9,7 +9,7 @@
 
       fromLua = [
         {
-          paths = ./custom-snippets;
+          # paths = ./custom-snippets;
         }
       ];
     };
