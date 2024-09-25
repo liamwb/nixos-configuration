@@ -11,7 +11,7 @@ programs.nixvim = {
 
     treesitterIntegration.enable = true;
     };
-  };
 
   extraConfigLua = "vim.g.matchup_override_vimtex = 1";
+  };
 }
