@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   imports = [
     # NOTE: The first thing you will want to do is uncommented on of the three imports below
     # depending on which module you chose to use to install Nixvim.
@@ -14,6 +14,7 @@
     ./plugins/treesitter.nix
     ./plugins/alpha-vim.nix
     ./plugins/vimtex.nix
+    ./plugins/vim-matchup.nix
     #
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #
