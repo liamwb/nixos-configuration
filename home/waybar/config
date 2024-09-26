@@ -77,7 +77,7 @@
             "format-icons": ["", "", "", "", ""]
         },
         "network": {
-            "format-wifi": "    {signalStrength}%",
+            "format-wifi": "   {signalStrength}%",
             "format-ethernet": "{cidr} 󰈀",
             "tooltip-format": "{ifname} via {gwaddr} ",
             "format-linked": "{ifname} (No IP) ",
