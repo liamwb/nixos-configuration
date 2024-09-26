@@ -71,6 +71,7 @@
     bottom  # perfomance info
     warp-terminal  # grant's malware
     smassh  # monkeytype tui
+    libreoffice-qt6-still  # libreoffice that doesn't look like shite
   
     luajitPackages.jsregexp  # dependency for LuaSnips
     fd  # like find, nvim wants it
