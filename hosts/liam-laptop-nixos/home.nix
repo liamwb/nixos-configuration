@@ -24,11 +24,13 @@
     };
   };
 
-  # stop git from freezing system
-  # home.sessionVariables = {
-  #   SSH_ASKPASS = "${pkgs.lxqt.lxqt-openssh-askpass}/bin/lxqt-openssh-askpass";
-  # };
+  # set the font size and shell for foot (per-host because I want different font sizes on different hosts)
+  xdg.configFile."foot/foot.ini".text = ''
+    # -*- conf -*-
 
+    shell=fish
+    font=monospace:size=14
+  '';
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
