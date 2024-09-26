@@ -10,6 +10,7 @@
       ./../../common/default.nix
       ./nvidia.nix
       ./windows-partition.nix
+      ./power-man.nix
     ];
 
   environment.systemPackages = [
