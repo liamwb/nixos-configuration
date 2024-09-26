@@ -1,23 +1,13 @@
-{lib, pkgs, inputs, ...}:
+{lib, config, ...}:
 let
-  base16 = pkgs.callPackage inputs.base16.lib { };
-  theme = (base16.mkSchemeAttrs "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml").withHashtag;
-  base = theme.base00;
-  mantle = theme.base01;
-  surface0 = theme.base02;
+  # Take colours from stylix theme
+  theme = config.lib.stylix.colors.withHashtag;
   surface1 = theme.base03;
-  surface2 = theme.base04;
-  text = theme.base05;
-  rosewater = theme.base06;
-  lavender = theme.base07;
-  red = theme.base08;
-  peach = theme.base09;
-  yellow = theme.base0A;
-  green = theme.base0B;
-  teal = theme.base0C;
-  blue = theme.base0D;
-  mauve = theme.base0E;
-  flamingo = theme.base0F;
+  orange = theme.orange;
+  red = theme.red;
+  magenta = theme.magenta;
+  bright-cyan = theme.bright-cyan;
+  blue = theme.blue;
 in {
   programs.starship = {
     enable = true;
@@ -29,12 +19,12 @@ in {
         "[](${red})"
         "$os"
         "$username"
-        "[](bg:${rosewater} fg:${red})"
+        "[](bg:${orange} fg:${red})"
         "$directory"
-        "[](fg:${rosewater} bg:${peach})"
+        "[](fg:${orange} bg:${magenta})"
         "$git_branch"
         "$git_status"
-        "[](fg:${peach} bg:${teal})"
+        "[](fg:${magenta} bg:${bright-cyan})"
         "$c"
         "$elixir"
         "$elm"
@@ -49,7 +39,7 @@ in {
         "$scala"
         "$python"
         "$custom"
-        "[](fg:${teal} bg:${blue})"
+        "[](fg:${bright-cyan} bg:${blue})"
         "$time"
         "[ ](fg:${blue})"
       ];
@@ -74,7 +64,7 @@ in {
       };
 
       directory = {
-        style = "bg:${rosewater} fg:${surface1}";
+        style = "bg:${orange} fg:${surface1}";
         format = "[ $path ]($style)";
         truncation_length = 3;
         truncation_symbol = "…/";
@@ -97,97 +87,97 @@ in {
 
       elixir = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       elm = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       git_branch = {
         symbol = "";
-        style = "bg:${peach} fg:${surface1}";
+        style = "bg:${magenta} fg:${surface1}";
         format = "[ $symbol $branch ]($style)";
       };
 
       git_status = {
-        style = "bg:${peach} fg:${surface1}";
+        style = "bg:${magenta} fg:${surface1}";
         format = "[$all_status$ahead_behind ]($style)";
       };
 
       golang = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       gradle = {
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       haskell = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       java = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       julia = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       nodejs = {
         symbol = "";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       nim = {
         symbol = "󰆥 ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       rust = {
         symbol = "";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       scala = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       python = {
         symbol = " ";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ($version) ]($style)";
       };
 
       custom.tex = {
         detect_extensions = ["tex"];
         symbol = "";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ]($style)";
       };
 
       custom.nix = {
         detect_extensions = ["nix"];
         symbol = "󱄅";
-        style = "bg:${teal} fg:${surface1}";
+        style = "bg:${bright-cyan} fg:${surface1}";
         format = "[ $symbol ]($style)";
       };
 
