@@ -37,6 +37,9 @@
     "application/pdf" = [ "zathura.desktop" ];
   };
 
+  # disable stylix for waybar since I have a custom module
+  stylix.targets.waybar.enable = false;
+
   home.packages = with pkgs; [
     firefox
     chromium

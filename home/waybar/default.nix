@@ -134,11 +134,6 @@ button:hover {
     color: ${brown};
 }
 
-#window {
-    color: ${base06};
-}
-
-
 .modules-right,.modules-center {
     background-color: ${base00}; 
     border-radius: 15px;
@@ -153,14 +148,6 @@ button:hover {
     padding-right: 13px;
     margin-right: 10px;
     margin-left: -10px;
-}
-
-
-#window {
-    background-color: ${base00};
-    border-radius: 15px;
-    border-color: #f53c3c;
-    padding: 0 20px;
 }
 
 .modules-right {
