@@ -33,9 +33,9 @@
   # enable stylix
   stylix = {
     enable = true;
-    image = /home/liamwb/Wallpapers/panes.jpg;
+    image = /home/liamwb/Wallpapers/bird.jpg;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/danqing.yaml";
   };
   # This fixes the unpopulated MIME menus
   # environment.etc."/xdg/menus/plasma-applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";

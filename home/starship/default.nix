@@ -2,7 +2,7 @@
 let
   # Take colours from stylix theme
   theme = config.lib.stylix.colors.withHashtag;
-  surface1 = theme.base03;
+  surface1 = theme.base00;
   orange = theme.orange;
   red = theme.red;
   magenta = theme.magenta;
