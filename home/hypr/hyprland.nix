@@ -205,8 +205,8 @@ in
         "${mainMod} SHIFT, 0, movetoworkspace, 10"
 
 # Example special workspace (scratchpad)
-# "${mainMod}, S, togglespecialworkspace, magic"
-# "${mainMod} SHIFT, S, movetoworkspace, special":magic
+        "${mainMod}, S, togglespecialworkspace, magic"
+        "${mainMod} SHIFT, S, movetoworkspace, special:magic"
 
 # Scroll through existing workspaces with mainMod + control + arrows
         "${mainMod}&Control_L, right, workspace, r+1"
