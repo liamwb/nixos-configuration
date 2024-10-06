@@ -35,7 +35,7 @@
     enable = true;
     image = /home/liamwb/Wallpapers/bird.jpg;
     polarity = "dark";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/danqing.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-soft.yaml";
   };
   # This fixes the unpopulated MIME menus
   # environment.etc."/xdg/menus/plasma-applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
