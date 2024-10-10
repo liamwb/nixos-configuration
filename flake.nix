@@ -11,7 +11,7 @@
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix/release-24.05";
     base16.url = "github:SenchoPens/base16.nix";
   };
 
