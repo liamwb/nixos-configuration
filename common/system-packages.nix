@@ -33,5 +33,6 @@
   cargo
   go
   kdePackages.okular
+  gnome.nautilus
   ];
 }
