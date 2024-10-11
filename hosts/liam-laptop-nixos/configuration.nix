@@ -1,7 +1,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ pkgs, laptop-background, ... }:
 
 {
   imports =
@@ -13,15 +13,6 @@
       ./power-man.nix
     ];
 
-  environment.systemPackages = [
-    (pkgs.where-is-my-sddm-theme.override {
-      themeConfig.General = {
-        # background = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-        # backgroundMode = "none";
-        showSessionsByDefault = "true";
-      };
-    })
-  ];
 
   users.users.liamwb = {
     isNormalUser = true;
@@ -33,12 +24,21 @@
   # enable stylix
   stylix = {
     enable = true;
-    image = /home/liamwb/Wallpapers/bird.jpg;
+    image = laptop-background;
     # polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-soft.yaml";
   };
-  # This fixes the unpopulated MIME menus
-  # environment.etc."/xdg/menus/plasma-applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
+  # theme for SDDM
+  environment.systemPackages = [
+    (pkgs.where-is-my-sddm-theme.override {
+      themeConfig.General = {
+        # background = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+        # backgroundMode = "none";
+        showSessionsByDefault = "true";
+      };
+    })
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -71,9 +71,6 @@
     LC_TELEPHONE = "en_AU.UTF-8";
     LC_TIME = "en_AU.UTF-8";
   };
-
-  # ui scaling
-  services.xserver.desktopManager.plasma5.useQtScaling = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

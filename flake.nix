@@ -15,7 +15,9 @@
     base16.url = "github:SenchoPens/base16.nix";
   };
 
-  outputs = { self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, base16, ... } @ inputs: {
+  outputs = { self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, base16, ... } @ inputs: let
+  laptop-background = /home/liamwb/Wallpapers/bird.jpg;
+  in {
 
     nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem { 
       system = "x86_64-linux";
@@ -38,12 +40,12 @@
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
           home-manager.extraSpecialArgs = {
-            inherit inputs;
+            inherit inputs laptop-background;
           };
         }
       ];
       specialArgs = {
-        inherit inputs;
+        inherit inputs laptop-background;
       };
     };
 

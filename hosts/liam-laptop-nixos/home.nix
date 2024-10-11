@@ -1,9 +1,8 @@
-{ config, pkgs, ... }:
+{ laptop-background, ... }:
 
 {
   imports = [
     ./../../home/default.nix
-    ./hyprpaper.nix
   ];
   
   wayland.windowManager.hyprland.settings = {
@@ -22,6 +21,14 @@
     targets = {
       # zathura.enable = false;
       kde.enable = false;
+    };
+  };
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = ["${laptop-background}"];
+      wallpaper = [ "eDP-1,${laptop-background}"];
     };
   };
 
