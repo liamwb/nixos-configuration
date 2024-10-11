@@ -33,7 +33,7 @@ in
         "mako"
         "nm-applet"
         "blueman-applet"
-        # "hyprpaper -c ~/.config/hypr/hyprpaper.conf"  # set wallpaper (stylix does this now)
+        "hyprpaper" # set wallpaper (stylix does this now)
         "waybar"
 # make sure that xdg-desktop-portal-hyprland can get the required variables on startup.
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP "

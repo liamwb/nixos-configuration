@@ -3,6 +3,7 @@
 {
   imports = [
     ./../../home/default.nix
+    ./hyprpaper.nix
   ];
   
   wayland.windowManager.hyprland.settings = {

@@ -1,7 +1,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -34,7 +34,7 @@
   stylix = {
     enable = true;
     image = /home/liamwb/Wallpapers/bird.jpg;
-    polarity = "dark";
+    # polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-soft.yaml";
   };
   # This fixes the unpopulated MIME menus
