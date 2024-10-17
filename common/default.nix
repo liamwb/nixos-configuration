@@ -35,13 +35,14 @@
 
   # enable polkit so i can save as sudo in hyprland
   security.polkit.enable = true;
-  # auto unlock KDE wallet
-  # security.pam.services.hyprland.kwallet.enable = true;
 
   # gnome-keyring services
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.hyprland.enableGnomeKeyring = true;
   programs.seahorse.enable = true;
+
+  # enable hyprlock to perform authentication
+  security.pam.services.hyprlock = {};
   ######### End Security ########
 
   # Input manager
