@@ -17,6 +17,7 @@
 
   outputs = { self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, base16, ... } @ inputs: let
   laptop-background = /home/liamwb/Wallpapers/bird.jpg;
+  pc-background = /home/liamwb/Wallpapers/dark-cat-rosewater.png;
   in {
 
     nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem { 
@@ -69,12 +70,12 @@
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
           home-manager.extraSpecialArgs = {
-            inherit inputs;
+            inherit inputs pc-background;
           };
         }
       ];
       specialArgs = {
-        inherit inputs;
+        inherit inputs pc-background;
       };
     };
   };

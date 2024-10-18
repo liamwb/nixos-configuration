@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, pc-background, ... }:
 
 {
   imports =
@@ -75,7 +75,7 @@
   # enable stylix
   stylix = {
     enable = true;
-    image = /home/liamwb/Wallpapers/dark-cat-rosewater.png;
+    image = pc-background;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   };

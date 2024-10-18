@@ -1,4 +1,4 @@
-{lib, ... }:
+{pc-background, ... }:
 
 {
   imports = [
@@ -23,6 +23,16 @@
     };
   };
 
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = ["${pc-background}"];
+      wallpaper = [ 
+      "DP-2,${pc-background}"
+      "DP-3,${pc-background}"
+      ];
+    };
+  };
   # set the font size and shell for foot (per-host because I want different font sizes on different hosts)
   xdg.configFile."foot/foot.ini".text = ''
     # -*- conf -*-
