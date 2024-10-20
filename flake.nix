@@ -16,8 +16,8 @@
   };
 
   outputs = { self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, base16, ... } @ inputs: let
-  laptop-background = /home/liamwb/Wallpapers/bird.jpg;
   pc-background = /home/liamwb/Wallpapers/dark-cat-rosewater.png;
+  laptop-background = /home/liamwb/Wallpapers/basement.jpg;
   in {
 
     nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem { 
