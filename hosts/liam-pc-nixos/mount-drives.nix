@@ -1,11 +1,11 @@
 {
   boot.supportedFilesystems = [ "ntfs" ];
 
-  fileSystems."/var/lib/nvme" = {
-    device = "/dev/nvme0n1p2";
-    fsType = "ntfs";
-    options = [ "rw" "users" "exec" "umask=000 0 0" ];
-  };
+  # fileSystems."/var/lib/nvme" = {
+  #   device = "/dev/nvme0n1p2";
+  #   fsType = "ntfs";
+  #   options = [ "rw" "users" "exec" "umask=000 0 0" ];
+  # };
 
   # To use proton with games stored on an NTFS filesystem, follow the instructions https://github.com/ValveSoftware/Proton/wiki/Using-a-NTFS-disk-with-Linux-and-Windows
 
