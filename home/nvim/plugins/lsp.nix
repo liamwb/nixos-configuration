@@ -127,6 +127,7 @@
             #};
           };
         };
+        html.enable = true;
       };
 
       keymaps = {
