@@ -11,6 +11,7 @@
     ./wlogout
     ./yazi.nix
     ./waybar
+    ./rofi
   ];
  
   # Home Manager needs a bit of information about you and the
@@ -39,6 +40,7 @@
 
   # disable stylix for waybar since I have a custom module
   stylix.targets.waybar.enable = false;
+  stylix.targets.rofi.enable = false;
 
   home.packages = with pkgs; [
     firefox
