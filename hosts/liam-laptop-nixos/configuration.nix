@@ -17,7 +17,7 @@
   users.users.liamwb = {
     isNormalUser = true;
     description = "my default user";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "storage" ];
     shell = pkgs.fish;
   };
 

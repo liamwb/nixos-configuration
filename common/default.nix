@@ -70,4 +70,9 @@
     options = "--delete-older-than 5d";
   };
 
+  # automount/unmount drives
+  services.devmon.enable = true;
+  services.gvfs.enable = true; 
+  services.udisks2.enable = true;
+
 }
