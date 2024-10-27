@@ -32,6 +32,9 @@
     };
   };
 
+  # set background for lock screen using custom option
+  programs.hyprlock.backgroundImage = laptop-background;
+
   # set the font size and shell for foot (per-host because I want different font sizes on different hosts)
   xdg.configFile."foot/foot.ini".text = ''
     # -*- conf -*-
