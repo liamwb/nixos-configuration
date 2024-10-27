@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./../../home/default.nix
+    ./../../home/default.nix 
   ];
   
   wayland.windowManager.hyprland.settings = {
@@ -33,6 +33,10 @@
       ];
     };
   };
+
+  # set background for lock screen using custom option
+  programs.hyprlock.backgroundImage = pc-background;
+
   # set the font size and shell for foot (per-host because I want different font sizes on different hosts)
   xdg.configFile."foot/foot.ini".text = ''
     # -*- conf -*-

@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 
   # This file controls all the home-manager stuff that is common to all my machines.
   imports = [
-    ./hypr
+    ./hypr 
     ./fish
     ./nvim
     ./zathura
