@@ -1,5 +1,15 @@
-{pkgs, config, options, lib, ... }:
-
+{config, ... }:
+let 
+  theme = config.lib.stylix.colors.withHashtag;
+  base00 = theme.base00;  # Default Background
+  base01 = theme.base01;  # Lighter Background (Used for status bars, line number and folding marks)
+  base02 = theme.base02;
+  base05 = theme.base05;  # Default Foreground, Caret, Delimiters, Operators
+  base06 = theme.base06;
+  base08 = theme.base08;  # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+  base0A = theme.base0A;  # Classes, Markup Bold, Search Text Background
+  base0B = theme.base0B;  # Strings, Inherited Class, Markup Code, Diff Inserted
+in
 {
   programs.wlogout = {
     enable = true;
@@ -49,13 +59,14 @@
         }
 
       window {
-        background-color: rgba(36, 39, 58, 0.9);
+        color: ${base06};
+        background-color: ${base00};
       }
 
       button {
         margin: 8px;
-        color: #cad3f5;
-        background-color: #363a4f;
+        color: ${base05};
+        background-color: ${base01};
         border-style: solid;
         border-width: 2px;
         background-repeat: no-repeat;
@@ -66,8 +77,7 @@
         button:active,
         button:focus,
         button:hover {
-          color: #8bd5ca;
-          background-color: #24273a;
+          background-color: ${base02};
           outline-style: none;
           }
 
