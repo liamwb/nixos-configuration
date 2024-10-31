@@ -54,12 +54,8 @@ in
     ];
 
     style = ''
-      * {
-        background-image: none;
-        }
-
       window {
-        color: ${base06};
+        color: ${base05};
         background-color: ${base00};
       }
 
@@ -82,27 +78,27 @@ in
           }
 
         #lock {
-          background-image: image(url("${./icons/lock.png}"));
+          background-image: image(url("${./icons/lock.svg}"));
         }
 
         #logout {
-          background-image: image(url("${./icons/logout.png}"));
+          background-image: image(url("${./icons/logout.svg}"));
         }
 
         #suspend {
-          background-image: image(url("${./icons/suspend.png}"));
+          background-image: image(url("${./icons/suspend.svg}"));
         }
 
         #hibernate {
-          background-image: image(url("${./icons/hibernate.png}"));
+          background-image: image(url("${./icons/hibernate.svg}"));
         }
 
         #shutdown {
-          background-image: image(url("${./icons/shutdown.png}"));
+          background-image: image(url("${./icons/shutdown.svg}"));
         }
 
         #reboot {
-          background-image: image(url("${./icons/reboot.png}"));
+          background-image: image(url("${./icons/reboot.svg}"));
         }
       '';
   };
