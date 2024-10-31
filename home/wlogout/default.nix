@@ -83,27 +83,27 @@ in
           }
 
         #lock {
-          background-image: image(url("${./icons/lock.svg}"));
+          background-image: image(url("${./icons/lock.png}"));
         }
 
         #logout {
-          background-image: image(url("${./icons/logout.svg}"));
+          background-image: image(url("${./icons/logout.png}"));
         }
 
         #suspend {
-          background-image: image(url("${./icons/suspend.svg}"));
+          background-image: image(url("${./icons/suspend.png}"));
         }
 
         #hibernate {
-          background-image: image(url("${./icons/hibernate.svg}"));
+          background-image: image(url("${./icons/hibernate.png}"));
         }
 
         #shutdown {
-          background-image: image(url("${./icons/shutdown.svg}"));
+          background-image: image(url("${./icons/shutdown.png}"));
         }
 
         #reboot {
-          background-image: image(url("${./icons/reboot.svg}"));
+          background-image: image(url("${./icons/reboot.png}"));
         }
       '';
   };
