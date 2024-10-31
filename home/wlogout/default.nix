@@ -54,6 +54,11 @@ in
     ];
 
     style = ''
+      * {
+              background-image: none;
+              box-shadow: none;
+      }
+
       window {
         color: ${base05};
         background-color: ${base00};
