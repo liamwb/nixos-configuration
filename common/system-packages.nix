@@ -22,6 +22,12 @@
   nix-search-cli
   protonup
   nil  # nix language server for nix ide    
+
+  # android tools
+  android-tools
+  heimdall
+  heimdall-gui
+
   # things I needed to install to get nvim.kickstart working
   gcc
   unzip
