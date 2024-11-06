@@ -40,5 +40,6 @@
   go
   kdePackages.okular
   gnome.nautilus
+  evince  # for thumbnails in nautilus
   ];
 }
