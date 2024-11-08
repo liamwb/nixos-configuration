@@ -70,6 +70,7 @@ button:hover {
 }
 
 #workspaces button {
+    color: ${base05};
     padding: 0 5px;
     background-color: transparent;
     color: #ffffff;
@@ -142,6 +143,7 @@ button:hover {
 
 #custom-power-button {
     background-color: ${base00};
+    color: ${base05};
     border-radius: 15px;
     border-color: #f53c3c;
     padding-left: 10px;

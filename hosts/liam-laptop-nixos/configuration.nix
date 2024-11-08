@@ -25,8 +25,8 @@
   stylix = {
     enable = true;
     image = laptop-background;
-    # polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    polarity = "dark";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 
   # theme for SDDM

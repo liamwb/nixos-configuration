@@ -26,9 +26,8 @@ in
 // define colors etc.
 * {
     bg: ${base00};
-    hv: ${base0E}; 
+    hv: ${base02}; 
     primary: ${base05}; 
-    ug: ${base01};
     font: "Monospace 11";
     background-color: @bg;
     //dark: @bg;
