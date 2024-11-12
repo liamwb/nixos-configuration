@@ -98,6 +98,7 @@ in
           "borderangle, 1, 8, default"
           "fade, 1, 7, default"
           "workspaces, 1, 6, default"
+          "specialWorkspace, 1, 4, default, slidefadevert -20%"
         ];
       };
 
@@ -170,7 +171,7 @@ in
         "ALT, F4, killactive,"
         "${mainMod}, M, exit,"
 # "${mainMod}, E, exec, $fileManager"
-        "${mainMod}, V, togglefloating,"
+        "${mainMod}, F, togglefloating,"
 # "${mainMod}, R, exec, $menu"
         "${mainMod}, P, pseudo, "# dwindle
         "${mainMod}, J, togglesplit, "# dwindle
@@ -223,9 +224,9 @@ in
 
 # SCREENSHOTS #
 # screenshot area
-        "${mainMod} SHIFT, A, exec, grimblast --notify copy area"
+        "${mainMod}, A, exec, grimblast --notify copy area"
 # screenshot whole screen
-        "${mainMod} SHIFT, S, exec, grimblast --notify copy output"
+        "${mainMod} SHIFT, A, exec, grimblast --notify copy output"
         ];
 
       binde = [

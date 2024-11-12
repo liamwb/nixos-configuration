@@ -2,6 +2,7 @@
 let 
   theme = config.lib.stylix.colors.withHashtag;
   base00 = theme.base00;
+  base02 = theme.base02;
   base04 = theme.base04;
   red = theme.red;
   bright-orange = theme.bright-orange;
@@ -40,7 +41,7 @@ button {
     border: none;
     border-radius: 0;
 }
-
+waybar
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
@@ -50,30 +51,31 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: ${base04};
+    background-color: ${base02};
 }
-
 #backlight:hover {
-    background-color: ${base04};
+    background-color: ${base02};
 }
 #network:hover {
-    background-color: ${base04};
+    background-color: ${base02};
 }
 #bluetooth:hover {
-    background-color: ${base04};
+    background-color: ${base02};
 }
 #battery:hover {
-    background-color: ${base04};
+    background-color: ${base02};
+}
+#temperature:hover {
+    background-color: ${base02};
 }
 #clock:hover {
-    background-color: ${base04};
+    background-color: ${base02};
 }
 
 #workspaces button {
     color: ${base05};
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
 }
 
 
