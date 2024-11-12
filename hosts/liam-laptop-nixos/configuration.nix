@@ -17,7 +17,7 @@
   users.users.liamwb = {
     isNormalUser = true;
     description = "my default user";
-    extraGroups = [ "networkmanager" "wheel" "storage" ];
+    extraGroups = [ "networkmanager" "wheel" "storage" "kvm" ];
     shell = pkgs.fish;
   };
 
@@ -26,7 +26,7 @@
     enable = true;
     image = laptop-background;
     polarity = "dark";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/blueforest.yaml";
   };
 
   # theme for SDDM

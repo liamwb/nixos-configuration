@@ -106,6 +106,7 @@ in
       dwindle = {
         pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below;
         preserve_split = true; # You probably want this
+        special_scale_factor = 0.8;
       };
 
 # See https://wiki.hyprland.org/Configuring/Master-Layout/ for configuring master layout
@@ -249,8 +250,6 @@ in
         "${mainMod}, mouse:273, resizewindow"
       ];
 
-
-# TODO Window Rule
 
 ##############################
 ### WINDOWS AND WORKSPACES ###
