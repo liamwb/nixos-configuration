@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   
   environment.systemPackages = with pkgs; [
@@ -41,5 +41,7 @@
   kdePackages.okular
   gnome.nautilus
   evince  # for thumbnails in nautilus
+
+  inputs.ignis.packages.${system}.ignis
   ];
 }

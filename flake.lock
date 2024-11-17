@@ -382,6 +382,26 @@
         "type": "github"
       }
     },
+    "ignis": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1731713536,
+        "narHash": "sha256-hDcGZN2mU6YTkXGEsHip2rQ6RFvxRDfnxjkNdykbGJM=",
+        "ref": "refs/heads/main",
+        "rev": "24fd6abdca79f5bceaef110b70888edff2c556db",
+        "revCount": 290,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/linkfrg/ignis"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/linkfrg/ignis"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -421,6 +441,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1729256560,
+        "narHash": "sha256-/uilDXvCIEs3C9l73JTACm4quuHUsIHcns1c+cHUJwA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4c2fcb090b1f3e5b47eaa7bd33913b574a11e0a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1731239293,
         "narHash": "sha256-q2yjIWFFcTzp5REWQUOU9L6kHdCDmFDpqeix86SOvDc=",
         "owner": "NixOS",
@@ -435,7 +471,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1714912032,
         "narHash": "sha256-clkcOIkg8G4xuJh+1onLG4HPMpbtzdLv4rHxFzgsH9c=",
@@ -483,8 +519,9 @@
       "inputs": {
         "base16": "base16",
         "home-manager": "home-manager",
+        "ignis": "ignis",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "stylix": "stylix"
       }
@@ -501,7 +538,7 @@
         "flake-compat": "flake-compat_3",
         "gnome-shell": "gnome-shell",
         "home-manager": "home-manager_3",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1718122552,
