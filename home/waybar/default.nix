@@ -29,7 +29,7 @@ in
 
 window#waybar {
     background-color: rgba(0,0,0,0);
-    border-radius: 13px;
+    border-radius: 5px;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -139,14 +139,14 @@ button:hover {
 
 .modules-right,.modules-center {
     background-color: ${base00}; 
-    border-radius: 15px;
+    border-radius: 5px;
     border-color: #f53c3c;
 }
 
 #custom-power-button {
     background-color: ${base00};
     color: ${base05};
-    border-radius: 15px;
+    border-radius: 5px;
     border-color: #f53c3c;
     padding-left: 10px;
     padding-right: 13px;
