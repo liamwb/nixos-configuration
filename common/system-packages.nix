@@ -28,6 +28,13 @@
   heimdall
   heimdall-gui
 
+  # for lilypad-suite
+  lilypond-with-fonts
+  mpv
+  fluidsynth
+  soundfont-fluid
+  ffmpeg_7-full
+
   # things I needed to install to get nvim.kickstart working
   gcc
   unzip
