@@ -25,6 +25,10 @@
           :with_pair(cond.not_before_text('@'))
       npairs.get_rule('{')
           :with_pair(cond.not_before_text('@'))
-      '';
+
+      npairs.add_rule(
+        Rule('<', '>', {'ly', 'lilypond'})
+      )
+        '';
   };
 }
