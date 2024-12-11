@@ -69,6 +69,7 @@
     jellyfin-media-player
     zoom
     yazi  # terminal file manager
+    bat
     obs-studio
     zathura  # pdf viewer
     feh  # image viewer
