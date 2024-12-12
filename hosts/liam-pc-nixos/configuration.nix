@@ -14,7 +14,7 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sdb";
+  boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "liam-pc-nixos"; # Define your hostname.
@@ -29,6 +29,9 @@
 
   # Set your time zone.
   time.timeZone = "Australia/Melbourne";
+
+  # Use local time so Windows doesn't get confused
+  time.hardwareClockInLocalTime = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
