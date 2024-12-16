@@ -1,9 +1,29 @@
 {pkgs, ...}:
-{
+let 
+  handle-textedit = pkgs.writeShellScriptBin "handle-textedit" ''
+      # Extract URI from argument
+      uri="''$1"
+
+      # Parse the URI (e.g., textedit://file:line:char)
+      regex='textedit://([^:]+):([0-9]+):([0-9]+)'
+      if [[ ''$uri =~ ''$regex ]]; then
+          file="''${BASH_REMATCH[1]}"
+          line="''${BASH_REMATCH[2]}"
+          char="''${BASH_REMATCH[3]}"
+
+          # Execute Neovim remote command
+          nvr -s +:"dr ''$file | call cursor(''$line,''$((char + 1)))"
+      else
+          echo "Invalid URI format: ''$uri" >&2
+          exit 1
+      fi
+  '';
+in {
   # programs.firefox.profiles.default.extraConfig = ''
   #    user_pref("network.protocol-handler.app.textedit", "lilypond-invoke-editor");
   #    user_pref("network.protocol-handler.warn-external.textedit", false);
   # '';
+  home.packages = [ handle-textedit ];
 
   programs.nixvim = {
 

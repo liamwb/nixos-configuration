@@ -34,8 +34,20 @@
   };
 
   # set default applications
-  xdg.mimeApps.defaultApplications = {
-    "application/pdf" = [ "zathura.desktop" ];
+  xdg = {
+    desktopEntries = {
+      handle-textedit = {
+        name = "TextEdit Handler";
+        exec = "handle-textedit %U";
+        categories = [ "Application" ];
+        mimeType = [ "x-textedit-handlet/textedit" ];
+        };
+    };
+
+    mimeApps.defaultApplications = {
+      "application/pdf" = [ "zathura.desktop" ];
+      "x-textedit-handlet/textedit" = [ "q" ];
+    };
   };
 
   home.sessionVariables = {
