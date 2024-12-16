@@ -26,6 +26,7 @@
       npairs.get_rule('{')
           :with_pair(cond.not_before_text('@'))
 
+      -- pair <> for chords in lilypond files
       npairs.add_rule(
         Rule('<', '>', {'ly', 'lilypond'})
       )

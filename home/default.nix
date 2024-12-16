@@ -38,6 +38,10 @@
     "application/pdf" = [ "zathura.desktop" ];
   };
 
+  home.sessionVariables = {
+    LYEDITOR= "nvr -s +:'dr %(file)s | call cursor(%(line)s,%(char)s+1)'";
+  };
+
   # disable stylix for waybar since I have a custom module
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
@@ -82,6 +86,7 @@
   
     luajitPackages.jsregexp  # dependency for LuaSnips
     fd  # like find, nvim wants it
+    neovim-remote  # nvr for point-and-click with lilypond-suite
 
     # packages for hyprland
     kitty

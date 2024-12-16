@@ -1,5 +1,16 @@
+{pkgs, ...}:
 {
+  # programs.firefox.profiles.default.extraConfig = ''
+  #    user_pref("network.protocol-handler.app.textedit", "lilypond-invoke-editor");
+  #    user_pref("network.protocol-handler.warn-external.textedit", false);
+  # '';
+
   programs.nixvim = {
+
+    extraPlugins = with pkgs.vimPlugins; [
+      nvim-lilypond-suite  
+    ];
+
     # example config taken from the github
     extraConfigLua = ''require('nvls').setup({
       lilypond = {
