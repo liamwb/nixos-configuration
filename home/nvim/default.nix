@@ -312,23 +312,26 @@
       # https://nix-community.github.io/nixvim/plugins/todo-comments/index.html
       todo-comments = {
         enable = true;
-        signs = true;
+        settings.signs = true;
       };
     };
 
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
-    extraPlugins = with pkgs.vimPlugins; [
-      # Useful for getting pretty icons, but requires a Nerd Font.
-      nvim-web-devicons # TODO: Figure out how to configure using this with telescope
-    ];
 
-    # TODO: Figure out where to move this
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapre
-    extraConfigLuaPre = ''
-      if vim.g.have_nerd_font then
-        require('nvim-web-devicons').setup {}
-      end
-    '';
+
+    # # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
+    # extraPlugins = with pkgs.vimPlugins; [
+    #   # Useful for getting pretty icons, but requires a Nerd Font.
+    #   nvim-web-devicons # TODO: Figure out how to configure using this with telescope
+    # ];
+    #
+    # # TODO: Figure out where to move this
+    # # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapre
+    # extraConfigLuaPre = ''
+    #   if vim.g.have_nerd_font then
+    #     require('nvim-web-devicons').setup {}
+    #   end
+    # '';
+    plugins.web-devicons.enable = true;
 
     extraConfigLua = ''
       vim.api.nvim_create_autocmd("FileType", {

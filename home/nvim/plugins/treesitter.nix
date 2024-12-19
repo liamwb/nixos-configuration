@@ -25,7 +25,7 @@
       # };
 
       # TODO: Don't think I need this as nixGrammars is true which should atuo install these???
-      ensureInstalled = [
+      settings.ensure_installed = [
         "bash"
         "c"
         "diff"
@@ -49,7 +49,7 @@
       #  ];
       #};
 
-      indent = true;
+      settings.indent.enable = true;
       #indent = {
       #enable = true;
       # TODO: Figure out how to do this

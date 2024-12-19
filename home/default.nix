@@ -90,7 +90,6 @@
     zathura  # pdf viewer
     feh  # image viewer
     base16-schemes  # collection of colour schemes
-    softmaker-office
     bottom  # perfomance info
     warp-terminal  # grant's malware
     smassh  # monkeytype tui
@@ -118,8 +117,8 @@
     grimblast
     xwaylandvideobridge
 
-    gnome.gnome-keyring
-    gnome.seahorse
+    gnome-keyring
+    seahorse
     libsecret
   ];
 

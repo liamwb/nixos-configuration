@@ -69,10 +69,9 @@ in
         active_opacity = 1.0;
         inactive_opacity = 0.9;  # 1.0
 
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        # "col.shadow" = "rgba(1a1a1aee)";
+        shadow = {
+          enabled = true;
+        };
 
 # https://wiki.hyprland.org/Configuring/Variables/#blur
         blur = {
@@ -153,7 +152,7 @@ in
 
       windowrule = [ 
         "size 400,Lxpolkit"
-        "forceinput,Lxpolkit"
+        "stayfocused,Lxpolkit"
       ];
 
 ########################

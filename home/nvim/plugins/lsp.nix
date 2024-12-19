@@ -86,7 +86,7 @@
         #}
         # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
         #
-        docker-compose-language-service = {
+        docker_compose_language_service = {
           enable = true;
         };
 
@@ -99,7 +99,7 @@
           };
         };
 
-        nil-ls.enable = true;  # LSP for the nix language
+        nil_ls.enable = true;  # LSP for the nix language
 
         pyright.enable = true;
         # Some languages (like typscript) have entire language plugins that can be useful:
@@ -110,7 +110,7 @@
         #  enable = true;
         #}
 
-        lua-ls = {
+        lua_ls = {
           enable = true;
 
           # cmd = {

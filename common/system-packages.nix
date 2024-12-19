@@ -22,6 +22,7 @@
   nix-search-cli
   protonup
   nil  # nix language server for nix ide    
+  nvd
 
   # android tools
   android-tools
@@ -46,7 +47,7 @@
   cargo
   go
   kdePackages.okular
-  gnome.nautilus
+  nautilus
   evince  # for thumbnails in nautilus
 
   inputs.ignis.packages.${system}.ignis
