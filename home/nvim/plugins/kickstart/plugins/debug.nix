@@ -52,6 +52,7 @@
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
+      # Original debug shortcuts
       {
         mode = "n";
         key = "<F5>";
@@ -100,6 +101,56 @@
           desc = "Debug: Step Out";
         };
       }
+      # Alternate debug keybinds because my laptop's function keys are borked
+      {
+        mode = "n";
+        key = "<leader>gs";
+        action.__raw = ''
+          function()
+            require('dap').continue()
+          end
+        '';
+        options = {
+          desc = "Debug: Start/Continue";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>gi";
+        action.__raw = ''
+          function()
+            require('dap').step_into()
+          end
+        '';
+        options = {
+          desc = "Debug: Step Into";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>go";
+        action.__raw = ''
+          function()
+            require('dap').step_over()
+          end
+        '';
+        options = {
+          desc = "Debug: Step Over";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>gu";
+        action.__raw = ''
+          function()
+            require('dap').step_out()
+          end
+        '';
+        options = {
+          desc = "Debug: Step Out";
+        };
+      }
+      # Breakpoints
       {
         mode = "n";
         key = "<leader>b";

@@ -21,7 +21,7 @@
         }
         { lhs = "<leader>s";
           name = "[S]earch";
-          hidden = true;
+          hidden = false;
         }
         { lhs = "<leader>w";
           name = "[W]orkspace";
@@ -34,6 +34,11 @@
         { lhs = "<leader>h";
           name = "Git [H]unk";
           hidden = true;
+        }
+        {
+          lhs = "<leader>g";
+          name = "Debug";
+          hidden = false;
         }
       ];
     };
