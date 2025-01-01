@@ -29,7 +29,7 @@ iron.setup {
     },
     -- How the repl window will be displayed
     -- See below for more information
-    repl_open_cmd = require('iron.view').split.belowright(0.4),
+    repl_open_cmd = require('iron.view').split.belowright(0.33),
     -- no line numbers for the interactive terminal
   },
   -- Iron doesn't set keymaps by default anymore.
