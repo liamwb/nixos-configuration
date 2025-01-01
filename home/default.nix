@@ -85,7 +85,12 @@
     jellyfin-media-player
     zoom
     yazi  # terminal file manager
-    bat
+    bat  # cat but with colours
+    dust  # disk usage terminal utility
+    # ncspot  # terminal spotify client (requires premium)
+    porsmo  # terminal pomodoro timer
+    wiki-tui  # wikipedia tui
+    tldr  # tldr for man pages
     obs-studio
     zathura  # pdf viewer
     feh  # image viewer
