@@ -196,8 +196,9 @@
       require('dap').listeners.after.event_initialized['dapui_config'] = require('dapui').open
       require('dap').listeners.before.event_terminated['dapui_config'] = require('dapui').close
       require('dap').listeners.before.event_exited['dapui_config'] = require('dapui').close
-      require("dap-python").setup("python")
+      require("dap-python").setup("python3")
     '';
-    # See https://www.reddit.com/r/neovim/comments/14sfpa6/struggling_to_setup_python_with_nvim_dap_module/ for python setup line -- without it imports did not work for me
+    # See https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#usage
+    # Following the "installed globally" instructions works when using `nix develop` or `nix-shell` for managing python dependencies
   };
 }
