@@ -29,6 +29,10 @@
   heimdall
   heimdall-gui
 
+  # rust
+    rustc
+    cargo
+
   # for lilypad-suite
   lilypond-with-fonts
   mpv
