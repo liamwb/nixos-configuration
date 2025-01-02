@@ -57,6 +57,7 @@
   # disable stylix for waybar since I have a custom module
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
+  stylix.targets.hyprlock.enable = false;
 
   home.packages = with pkgs; [
     firefox

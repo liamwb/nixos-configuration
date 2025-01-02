@@ -1,6 +1,6 @@
 {config, lib, ...}:
 let 
-  theme = config.lib.stylix.colors.withHashtag;
+  theme = config.lib.stylix.colors;  # hyprlock config does not want hashtags in front of rbg hex codes
   base00 = theme.base00;  # Default Background
   base01 = theme.base01;  # Lighter Background (Used for status bars, line number and folding marks)
   base05 = theme.base05;  # Default Foreground, Caret, Delimiters, Operators
@@ -25,19 +25,19 @@ in
 
 # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
               blur_passes = 1 # 0 disables blurring
-                  blur_size = 1
+              blur_size = 1
           }
 
       input-field {
           monitor =
-              size = 200, 30
-              outline_thickness = 1
+              size = 400, 60
+              outline_thickness = 2
               dots_size = 0.33 # Scale of input-field height, 0.2 - 0.8
               dots_spacing = 0.15 # Scale of dots' absolute size, 0.0 - 1.0
               dots_center = false
               dots_rounding = -1 # -1 default circle, -2 follow input-field rounding
-              outer_color = rgb(${base01})
-              inner_color = rgb(${base00})
+              outer_color = rgb(${base00})
+              inner_color = rgb(${base01})
               font_color = rgb(${base05})
               fade_on_empty = false
               fade_timeout = 1000 # Milliseconds before fade_on_empty is triggered.
@@ -64,7 +64,7 @@ in
               color = rgb(${base05})
               font_size = 55
               font_family = sans-serif
-              position = -100, -40
+              position = -100, 40
               halign = right
               valign = bottom
               shadow_passes = 5
