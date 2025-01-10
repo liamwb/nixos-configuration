@@ -9,15 +9,15 @@
       settings.spec = [
         { lhs = "<leader>c";
           name = "[C]ode";
-          hidden = true;
+          hidden = false;
         }
         { lhs = "<leader>d";
           name = "[D]ocument";
-          hidden = true;
+          hidden = false;
         }
         { lhs = "<leader>r";
           name = "[R]ename";
-          hidden = true;
+          hidden = false;
         }
         { lhs = "<leader>s";
           name = "[S]earch";
@@ -29,7 +29,7 @@
         }
         { lhs = "<leader>t";
           name = "[T]oggle";
-          hidden = true;
+          hidden = false;
         }
         { lhs = "<leader>h";
           name = "Git [H]unk";

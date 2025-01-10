@@ -23,6 +23,7 @@
   protonup
   nil  # nix language server for nix ide    
   nvd
+  openssl
 
   # android tools
   android-tools
@@ -30,8 +31,10 @@
   heimdall-gui
 
   # rust
-    rustc
-    cargo
+  rustc
+  cargo
+  cargo-generate
+  pkg-config
 
   # for lilypad-suite
   lilypond-with-fonts
