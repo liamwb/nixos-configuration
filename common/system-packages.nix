@@ -35,6 +35,7 @@
   cargo
   cargo-generate
   pkg-config
+  lldb  # debug adapter
 
   # for lilypad-suite
   lilypond-with-fonts

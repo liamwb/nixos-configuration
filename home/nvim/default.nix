@@ -17,6 +17,7 @@
     ./plugins/vim-matchup.nix
     ./plugins/lilypond.nix
     ./plugins/iron.nix
+    ./plugins/rustaceanvim.nix
     #
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #

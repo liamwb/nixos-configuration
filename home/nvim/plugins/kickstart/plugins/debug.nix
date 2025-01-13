@@ -48,7 +48,16 @@
           enable = true;
         };
       };
+
+      configurations = {
+        rust = [{
+          name = "Launch debugger";
+          type = "lldb";
+          request = "launch";
+        }];
+      };
     };
+
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
