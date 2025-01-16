@@ -27,10 +27,10 @@
           controls = {
             icons = {
               pause = "";
-              play = "";
-              step_into = "";
-              step_over = "";
-              step_out = "";
+              play = " <F5>";
+              step_into = " <F1>";
+              step_over = " <F2>";
+              step_out = " <F3>";
               step_back = "";
               run_last = "";
               terminate = "";
@@ -38,6 +38,8 @@
             };
           };
         };
+
+        dap-virtual-text.enable = true;
 
         # Add your own debuggers here
         dap-go = {
@@ -49,13 +51,23 @@
         };
       };
 
-      configurations = {
-        rust = [{
-          name = "Launch debugger";
-          type = "lldb";
-          request = "launch";
-        }];
+      adapters = {
+        executables = { lldb = {command = "${pkgs.lldb}/bin/lldb-dap"; }; };
       };
+      # Unfortunately this does not work, since I can't work out how to get the `program` field to be written as a function instead of a string. Some extraConfigLua is required instead.
+
+      # configurations = {
+      #   rust = [{
+      #     name = "Launch debugger";
+      #     type = "lldb";
+      #     request = "launch";
+      #     program = '' 
+      #         function()
+      #           return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+      #         end,
+      #       '';
+      #   }];
+      # };
     };
 
 
