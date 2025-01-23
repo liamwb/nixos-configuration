@@ -63,6 +63,8 @@
     firefox
     chromium
     thunderbird
+    zotero 
+
     fish # friendly shell
     nerdfonts # nerd fonts for pretty shell
     starship # terminal customisation
