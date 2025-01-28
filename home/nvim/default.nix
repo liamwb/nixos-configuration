@@ -335,18 +335,54 @@
     # '';
     plugins.web-devicons.enable = true;
 
+    # TODO: Move these and debug configs to language-specific files
     extraConfigLua = ''
+      -- commands for python files
       vim.api.nvim_create_autocmd("FileType", {
-            pattern = "python",
-            callback = function()
-              vim.api.nvim_buf_set_keymap(0, 'n', '<leader>R', ':w<CR>:split term://python3 %<CR>', { 
-                noremap = true, 
-                silent = true,
-                desc = "Run Python File"
-                })
-            end,
+        pattern = "python",
+        callback = function()
+          vim.api.nvim_buf_set_keymap(0, 'n', '<leader>R', ':w<CR>:split term://python3 %<CR>', { 
+            noremap = true, 
+            silent = true,
+            desc = "Run Python File"
           })
-    '';
+        end,
+      })
+
+      '';
+
+    extraFiles = {
+      "ftplugin/rust.lua".text = ''
+        local bufnr = vim.api.nvim_get_current_buf()
+          vim.keymap.set(
+            "n", 
+            "<leader>a", 
+            function()
+              vim.cmd.RustLsp('codeAction') -- supports rust-analyzer's grouping
+              -- or vim.lsp.buf.codeAction() if you don't want grouping.
+            end,
+            { silent = true, buffer = bufnr }
+          )
+
+          vim.keymap.set(
+            "n", 
+            "K",  -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
+            function()
+              vim.cmd.RustLsp({'hover', 'actions'})
+            end,
+            { silent = true, buffer = bufnr }
+          )
+
+          vim.keymap.set(
+            "n", 
+            "R",  -- Run rust file
+            function()
+              vim.cmd.RustLsp('runnables')
+            end,
+            { silent = true, buffer = bufnr }
+          )
+      '';
+    };
 
     # The line beneath this is called `modeline`. See `:help modeline`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapost
