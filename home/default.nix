@@ -110,9 +110,6 @@
     fd  # like find, nvim wants it
     neovim-remote  # nvr for point-and-click with lilypond-suite
 
-    # local ai
-    alpaca
-
     # packages for hyprland
     kitty
     hyprland

@@ -3,7 +3,11 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { pkgs, pc-background, ... }:
-
+let 
+  alpacaAccel = pkgs.alpaca.override {
+    ollama = pkgs.ollama-rocm;
+  };
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -73,6 +77,7 @@
         showSessionsByDefault = "true";
       };
     })
+    alpacaAccel
   ];
 
   # enable stylix
@@ -82,6 +87,9 @@
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   };
+
+  # This is for hardware accelerated local LLMs
+  services.ollama.acceleration = "rocm";
 
   ######### Enable SDDM, Hyprland ###########
   services.xserver.enable = true;
