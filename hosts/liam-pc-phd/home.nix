@@ -9,6 +9,12 @@
   home.username = lib.mkForce "phduser";  # all other machines the username is liamwb
   home.homeDirectory = lib.mkForce "/home/phduser";  # all other machines the directory is /home/liamwb
 
+  # path fuckery for ubuntu + hyprland
+  home.sessionPath = [
+    "/nix/var/nix/profiles/default/bin"
+    "/home/phduser/.nix-profile/bin"
+  ];
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -27,7 +33,26 @@
 	  allowUnfree = true;
   };
 
+
+  # set the font size and shell for foot (per-host because I want different font sizes on different hosts)
+  xdg.configFile."foot/foot.ini".text = ''
+    # -*- conf -*-
+
+    shell=fish
+    font=monospace:size=12
+  '';
+
   stylix.image = ./../../wallpapers/abstract.jpg;
+
+  wayland.windowManager.hyprland.settings = {
+    # the version of hyprland in apt for ubuntu does not support the decoration:shadow option
+    decoration = lib.mkForce {};
+
+    env = [ 
+      "PATH,/nix/var/nix/profiles/default/bin:/home/phduser/.nix-profile/bin:$PATH"
+    ];
+  };
+
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
