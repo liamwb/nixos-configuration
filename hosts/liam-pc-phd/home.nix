@@ -42,7 +42,12 @@
     font=monospace:size=12
   '';
 
-  stylix.image = ./../../wallpapers/abstract.jpg;
+  stylix = {
+    enable = true;
+    image = ./../../wallpapers/abstract.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    polarity = "dark";
+  };
 
   wayland.windowManager.hyprland.settings = {
     # the version of hyprland in apt for ubuntu does not support the decoration:shadow option
