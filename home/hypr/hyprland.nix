@@ -38,7 +38,7 @@ in
         "hypridle"
 # make sure that xdg-desktop-portal-hyprland can get the required variables on startup.
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP "
-        "onedrive --synchronize"
+        "onedrive --sync"
       ];
 
       general = { 
