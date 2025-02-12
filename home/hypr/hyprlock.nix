@@ -11,7 +11,7 @@ in
 {
   options.programs.hyprlock.backgroundImage = lib.mkOption {
       type = lib.types.path;
-      default = "";
+      default = ./../../wallpapers/abstract.jpg;
       description = "Path to the background image for Hyprlock";
   };
   # avoid error "caused by introducing a top-level config' or options' attribute. Add configuration attributes immediately on the top level instead, or move all of them (namely: programs) into the explicit config' attribute."

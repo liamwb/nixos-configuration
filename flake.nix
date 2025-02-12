@@ -80,5 +80,17 @@
         inherit inputs pc-background;
       };
     };
+
+    homeConfigurations."phduser" = home-manager.lib.homeManagerConfiguration {
+	pkgs = nixpkgs.legacyPackages."x86_64-linux";
+	
+	
+
+	modules = [ 
+		./hosts/liam-pc-phd/home.nix 
+		nixvim.homeManagerModules.nixvim
+		stylix.homeManagerModules.stylix
+		];
+    };
   };
 }
