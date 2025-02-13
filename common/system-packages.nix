@@ -21,8 +21,6 @@
     ]))
   nix-search-cli
   protonup
-  nil  # nix language server for nix ide    
-  nvd
   openssl
 
   # android tools

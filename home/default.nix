@@ -109,6 +109,8 @@
     luajitPackages.jsregexp  # dependency for LuaSnips
     fd  # like find, nvim wants it
     neovim-remote  # nvr for point-and-click with lilypond-suite
+    nil  # nix language server for nix ide    
+    nvd
 
     # packages for hyprland
     kitty
