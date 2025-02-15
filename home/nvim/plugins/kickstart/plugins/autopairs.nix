@@ -26,6 +26,18 @@
       npairs.get_rule('{')
           :with_pair(cond.not_before_text('@'))
 
+      -- don't pair ' or in latex
+      require("nvim-autopairs").get_rules("'")[1]:with_pair(cond.not_filetypes({"tex", "latex"}))
+      require("nvim-autopairs").get_rules("`")[1]:with_pair(cond.not_filetypes({"tex", "latex"}))
+
+      -- autopair the quotation marks in latex 
+      npairs.add_rule(
+        Rule("`", "'", {'latex', 'tex'})
+      )
+      npairs.add_rule(
+        Rule("``", "\'\'", {'latex', 'tex'})
+      ) -- this one doesn't seeem to work
+
       -- pair <> for chords in lilypond files
       npairs.add_rule(
         Rule('<', '>', {'ly', 'lilypond'})
