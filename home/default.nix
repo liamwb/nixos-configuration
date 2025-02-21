@@ -78,6 +78,7 @@
     openvpn
     android-studio
     texlive.combined.scheme-full
+    inkscape  # required for including svgs in latex documents
     cava # music visualisation
     nvtopPackages.full # gpu utilisation info
     fzf
