@@ -59,4 +59,9 @@
 
   inputs.ignis.packages.${system}.ignis
   ];
+
+  # option for devenv
+  nix.extraOptions = ''
+        trusted-users = root liamwb
+    '';
 }
