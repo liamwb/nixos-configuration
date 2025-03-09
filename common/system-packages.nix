@@ -9,6 +9,7 @@
   tree
   gparted
   vscode
+  devenv
   (python311.withPackages(ps: with ps; [ 
     networkx 
     matplotlib 
