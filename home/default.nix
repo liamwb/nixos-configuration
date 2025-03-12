@@ -69,7 +69,7 @@
     nerdfonts # nerd fonts for pretty shell
     starship # terminal customisation
     foot  # terminal emulator
-    steam
+    #  steam don't include in phd machine so move to per-machine
     discord
     fastfetch
     lsd # ls with icons

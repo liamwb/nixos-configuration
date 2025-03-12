@@ -1,8 +1,12 @@
-{ laptop-background, ... }:
+{pkgs, laptop-background, ... }:
 
 {
   imports = [
     ./../../home/default.nix
+  ];
+
+  home.packages = with pkgs; [
+    steam
   ];
   
   wayland.windowManager.hyprland.settings = {
