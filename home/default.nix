@@ -64,6 +64,7 @@
     chromium
     thunderbird
     zotero 
+    youtube-music
 
     fish # friendly shell
     nerdfonts # nerd fonts for pretty shell
