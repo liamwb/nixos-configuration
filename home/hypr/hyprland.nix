@@ -2,6 +2,7 @@
 let 
 mainMod = "SUPER";
 terminal = "foot";
+browser = "firefox";
 in
 {
 
@@ -168,6 +169,7 @@ in
 
       bind = [
         "${mainMod}, Q, exec, ${terminal}"
+        "${mainMod}, B, exec, ${browser}"
         "ALT, F4, killactive,"
         "${mainMod}, M, exit,"
 # "${mainMod}, E, exec, $fileManager"
