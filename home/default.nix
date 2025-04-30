@@ -64,6 +64,7 @@
     chromium
     thunderbird
     zotero 
+    sage
     youtube-music
 
     fish # friendly shell
