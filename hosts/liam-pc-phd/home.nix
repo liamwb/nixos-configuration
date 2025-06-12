@@ -49,8 +49,8 @@ in
 
   stylix = {
     enable = true;
-    image = ./../../wallpapers/nord-rainbow-dark-nix.png;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    image = ./../../wallpapers/owl.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/precious-dark-fifteen.yaml";
     polarity = "dark";
   };
 
