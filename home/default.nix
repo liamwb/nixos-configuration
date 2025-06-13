@@ -74,6 +74,7 @@
     #  steam don't include in phd machine so move to per-machine
     discord
     fastfetch
+    pokeget-rs  # important for drip
     lsd # ls with icons
     teams-for-linux
     onedrive
