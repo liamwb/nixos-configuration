@@ -1,5 +1,5 @@
 # nixos-configuration
-This repository contains my nixos-configuration files. It uses flakes to declare configurations for two machines, and tries to lay out all of the configuration options using Nix options and home-manager. It uses Stylix for automatic theming, and includes a detailed Neovim configuration using Nixvim. The gallery below contains some screenshots of some particularly polished parts of my configuration. Feel free to use it as a reference!
+This repository contains my nixos-configuration files. It uses flakes to declare configurations for three machines, and tries to lay out all of the configuration options using Nix options and home-manager. It uses Stylix for automatic theming, and includes a detailed Neovim configuration using Nixvim. The gallery below contains some screenshots of some particularly polished parts of my configuration. Feel free to use it as a reference!
 
 | Automatic Theming | Terminal |
 |---------------|---------------|
