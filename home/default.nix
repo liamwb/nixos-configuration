@@ -66,6 +66,7 @@
     zotero 
     sage
     youtube-music
+    vscode
 
     fish # friendly shell
     nerdfonts # nerd fonts for pretty shell
