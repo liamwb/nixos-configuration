@@ -13,6 +13,9 @@
       enable = true;
     };
 
+    plugins.ltex-extra.enable = true;  # adds support for more ltex functionality
+
+
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
       # NOTE: This is how you would ad a vim plugin that is not implemented in Nixvim, also see extraConfigLuaPre below
