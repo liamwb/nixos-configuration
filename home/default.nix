@@ -69,7 +69,7 @@
     vscode
 
     fish # friendly shell
-    nerdfonts # nerd fonts for pretty shell
+    nerd-fonts.monaspace # nerd fonts for pretty shell
     starship # terminal customisation
     foot  # terminal emulator
     #  steam don't include in phd machine so move to per-machine
@@ -101,7 +101,6 @@
     tldr  # tldr for man pages
     obs-studio
     zathura  # pdf viewer
-    feh  # image viewer
     base16-schemes  # collection of colour schemes
     bottom  # perfomance info
     warp-terminal  # grant's malware
@@ -109,6 +108,10 @@
     libreoffice-qt6-still  # libreoffice that doesn't look like shite
     telegram-desktop
     easyeffects
+
+    # photography
+    qimgv
+    darktable
   
     # neovim
     luajitPackages.jsregexp  # dependency for LuaSnips
@@ -133,7 +136,7 @@
     libnotify
     wlogout
     grimblast
-    xwaylandvideobridge
+    kdePackages.xwaylandvideobridge
 
     gnome-keyring
     seahorse

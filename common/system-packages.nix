@@ -9,16 +9,6 @@
   tree
   gparted
   devenv
-  (python311.withPackages(ps: with ps; [ 
-    networkx 
-    matplotlib 
-    numpy 
-    notebook 
-    pynvim 
-    progress 
-    tqdm 
-    debugpy
-    ]))
   nix-search-cli
   protonup
   openssl

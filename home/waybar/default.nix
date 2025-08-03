@@ -5,7 +5,7 @@ let
   base02 = theme.base02;
   base04 = theme.base04;
   red = theme.red;
-  bright-orange = theme.bright-orange;
+  bright-magenta = theme.bright-magenta;
   yellow = theme.yellow;
   blue = theme.blue;
   bright-cyan = theme.bright-cyan;
@@ -114,7 +114,7 @@ button:hover {
 }
 
 #backlight {
-    color: ${bright-orange}
+    color: ${bright-magenta}
 }
 
 #network {

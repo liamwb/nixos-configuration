@@ -81,9 +81,7 @@
         # gopls = {
         #  enable = true;
         #}
-        pylsp = {
-         enable = true;
-        };
+        # pylsp.enable = true;
 
         # handled by rustaceanvim now
 
@@ -109,7 +107,7 @@
 
         nil_ls.enable = true;  # LSP for the nix language
 
-        pyright.enable = true;
+        # pyright.enable = true;
         # Some languages (like typscript) have entire language plugins that can be useful:
         #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
         #

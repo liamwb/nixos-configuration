@@ -2,14 +2,13 @@
 programs.nixvim = {
     plugins.vim-matchup = {
       enable = true;
-      enableSurround = true;
 
-      matchParen = {
-        hiSurroundAlways = true;  # highlight surrounding delimiters always (requires deferred highlighting)
-        deferred.enable = true;
+      settings = {
+        surround_enabled = 1;
+        matchparen_deferred_hi_surround_always = true;
+        matchparen_deferred = 1;
       };
-
-    treesitterIntegration.enable = true;
+      treesitter.enable = true;
     };
 
   extraConfigLua = ''

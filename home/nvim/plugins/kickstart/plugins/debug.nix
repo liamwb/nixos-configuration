@@ -7,67 +7,44 @@
     # be extended to other languages as well. That's why it's called
     # kickstart.nixvim and not ktichen-sink.nixvim ;)
     # https://nix-community.github.io/nixvim/plugins/dap/index.html
-    plugins.dap = {
+
+    plugins.dap-virtual-text.enable = true;
+
+        # Creates a beautiful debugger UI
+    plugins.dap-ui = {
       enable = true;
 
-      extensions = {
-        # Creates a beautiful debugger UI
-        dap-ui = {
-          enable = true;
+      # Set icons to characters that are more likely to work in every terminal.
+      # Feel free to remove or use ones that you like more! :)
+      # Don't feel like these are good choices.
+      settings = {
+        icons = {
+          expanded = "▾";
+          collapsed = "▸";
+          current_frame = "*";
 
-          # Set icons to characters that are more likely to work in every terminal.
-          # Feel free to remove or use ones that you like more! :)
-          # Don't feel like these are good choices.
-          icons = {
-            expanded = "▾";
-            collapsed = "▸";
-            current_frame = "*";
-          };
-
-          controls = {
-            icons = {
-              pause = "";
-              play = " <F5>";
-              step_into = " <F1>";
-              step_over = " <F2>";
-              step_out = " <F3>";
-              step_back = "";
-              run_last = "";
-              terminate = "";
-              disconnect = "";
-            };
-          };
-        };
-
-        dap-virtual-text.enable = true;
-
-        # Add your own debuggers here
-        dap-go = {
-          enable = true;
-        };
-
-        dap-python = {
-          enable = true;
+          pause = "";
+          play = " <F5>";
+          step_into = " <F1>";
+          step_over = " <F2>";
+          step_out = " <F3>";
+          step_back = "";
+          run_last = "";
+          terminate = "";
+          disconnect = "";
         };
       };
+    };
+
+    plugins.dap-go.enable = true;
+    plugins.dap-python.enable = true;
+
+    plugins.dap = {
+      enable = true;
 
       adapters = {
         executables = { lldb = {command = "${pkgs.lldb}/bin/lldb-dap"; }; };
       };
-      # Unfortunately this does not work, since I can't work out how to get the `program` field to be written as a function instead of a string. Some extraConfigLua is required instead.
-
-      # configurations = {
-      #   rust = [{
-      #     name = "Launch debugger";
-      #     type = "lldb";
-      #     request = "launch";
-      #     program = '' 
-      #         function()
-      #           return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
-      #         end,
-      #       '';
-      #   }];
-      # };
     };
 
 
