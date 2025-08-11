@@ -70,6 +70,7 @@
 
     fish # friendly shell
     nerd-fonts.monaspace # nerd fonts for pretty shell
+    nerd-fonts.hack
     starship # terminal customisation
     foot  # terminal emulator
     #  steam don't include in phd machine so move to per-machine
@@ -123,15 +124,16 @@
     # packages for hyprland
     kitty
     hyprland
+    hyprpaper
+    hypridle
+    hyprlock
+    hyprcursor
     waybar
     rofi-wayland # up launcher
     networkmanagerapplet
-    hyprpaper
     brightnessctl # for screen brightness
     blueman #  bluetooth
     pavucontrol # auio controller?
-    hypridle
-    hyprlock
     mako
     libnotify
     wlogout

@@ -151,10 +151,10 @@ in
 ### WINDOW RULES ###
 ####################
 
-      windowrule = [ 
-        "size 400,Lxpolkit"
-        "stayfocused,Lxpolkit"
-      ];
+      # windowrule = [ 
+      #   "size 400,Lxpolkit"
+      #   "stayfocused,Lxpolkit"
+      # ];
 
 ########################
 ### END WINDOW RULES ###
