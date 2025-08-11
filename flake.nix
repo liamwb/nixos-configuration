@@ -37,7 +37,7 @@
           home-manager.users.liamwb = import ./hosts/liam-laptop-nixos/home.nix;
           home-manager.backupFileExtension = "backup"; # create a backup on collision
           home-manager.sharedModules = [
-            nixvim.homeManagerModules.nixvim
+            nixvim.homeModules.nixvim
           ];
 
           # Optionally, use home-manager.extraSpecialArgs to pass
@@ -66,7 +66,7 @@
           home-manager.users.liamwb = import ./hosts/liam-pc-nixos/home.nix;
           home-manager.backupFileExtension = "backup"; # create a backup on collision
           home-manager.sharedModules = [
-            nixvim.homeManagerModules.nixvim
+            nixvim.homeModules.nixvim
           ];
 
           # Optionally, use home-manager.extraSpecialArgs to pass
@@ -88,8 +88,8 @@
 
 	modules = [ 
 		./hosts/liam-pc-phd/home.nix 
-		nixvim.homeManagerModules.nixvim
-		stylix.homeManagerModules.stylix
+		nixvim.homeModules.nixvim
+		stylix.homeModules.stylix
 		];
     };
   };
