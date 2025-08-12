@@ -54,6 +54,8 @@
     LYEDITOR= "nvr -s +:'dr %(file)s | call cursor(%(line)s,%(char)s+1)'";
   };
 
+  fonts.fontconfig.enable = true;  # make fonts installed via HM discoverable
+
   # disable stylix for waybar since I have a custom module
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
@@ -71,6 +73,7 @@
     fish # friendly shell
     nerd-fonts.monaspace # nerd fonts for pretty shell
     nerd-fonts.hack
+    nerd-fonts.jetbrains-mono
     starship # terminal customisation
     foot  # terminal emulator
     #  steam don't include in phd machine so move to per-machine
