@@ -2,6 +2,7 @@
   imports = [
     ./hyprland.nix
     ./hyprlock.nix 
+    ./cursor.nix
   ];
   home.file.".config/hypr/hypridle.conf".source = ./hypridle.conf; 
   # home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
@@ -12,5 +13,4 @@
   # On NixOS, it can be enabled using:
   #
   # security.pam.services.hyprlock = {};
-
 }
