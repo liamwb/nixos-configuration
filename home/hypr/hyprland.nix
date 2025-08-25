@@ -220,8 +220,9 @@ in
         "${mainMod} Control_L SHIFT, right, movetoworkspace, r+1"
         "${mainMod} Control_L SHIFT, left, movetoworkspace, r-1"
 
-# rofi launcher
-        "${mainMod}, space, exec, rofi -show drun  -show-icons"
+# launcher
+        "${mainMod}, space, exec, fuzzel"
+# bar
         "${mainMod}, K, exec, pkill waybar || waybar"
 
 # SCREENSHOTS #

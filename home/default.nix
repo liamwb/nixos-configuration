@@ -133,6 +133,7 @@
     hyprcursor
     waybar
     rofi-wayland # up launcher
+    fuzzel  # another launcher
     networkmanagerapplet
     brightnessctl # for screen brightness
     blueman #  bluetooth
