@@ -11,8 +11,9 @@ in
         enable = true;
         settings = {
             main = {
-            font = lib.mkForce "Monospace:size=14";
-        };
+                font = lib.mkForce "Monospace:size=14";
+                width = 45;  # default 30
+            };
         };
     };
 }
