@@ -11,7 +11,8 @@
     ./wlogout
     ./yazi.nix
     ./waybar
-    ./rofi
+    # ./rofi
+    ./fuzzel
   ];
  
   # Home Manager needs a bit of information about you and the

@@ -10,7 +10,9 @@ in
     programs.fuzzel = {
         enable = true;
         settings = {
-            colors.background = background;
+            main = {
+            font = lib.mkForce "Monospace:size=14";
+        };
         };
     };
 }
