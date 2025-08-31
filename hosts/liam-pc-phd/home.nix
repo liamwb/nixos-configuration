@@ -59,8 +59,8 @@ in
     decoration = lib.mkForce {};
 
     monitor =[
-    "DP-6,1920x1080@60,0x0,1"
-    "DP-5,1920x1080@60,1920x0,1"
+    "DP-6,1920x1080@60,1920x0,1"
+    "DP-8,1920x1080@60,0x0,1"
     " , preferred, auto, 1"  # add other monitors to the right at default res
     ];
 
