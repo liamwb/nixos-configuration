@@ -9,16 +9,24 @@
     steam
   ];
   
-  wayland.windowManager.hyprland.settings = {
-    monitor = [
-    "DP-1, 1920x1080@60, 0x0, 1"
-    "DP-3, 1920x1080@165, 1920x0, 1"
-    ];
+  wayland.windowManager.hyprland = {
+    settings = {
+      monitor = [
+        "DP-1, 1920x1080@60, 0x0, 1"
+        "DP-3, 1920x1080@165, 1920x0, 1"
+      ];
 
-    input = {
-      sensitivity = -0.8;
+      # this doesn't work for some reason so we use extraConfig
+      # input = {
+      #   sensitivity = -1;
+      # };
     };
-
+    extraConfig = ''
+      device {
+        name=tt-esports-iris-optical-rgb
+        sensitivity=-0.8
+        }
+    '';
   };
 
   stylix = {
