@@ -49,7 +49,7 @@ in
 
   stylix = {
     enable = true;
-    image = ./../../wallpapers/excellent_bird.jpg
+    image = ./../../wallpapers/excellent_bird.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/precious-dark-fifteen.yaml";
     polarity = "dark";
   };
