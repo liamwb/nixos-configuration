@@ -96,7 +96,7 @@
     vlc
     slack
     jellyfin-media-player
-    zoom
+    zoom-us
     yazi  # terminal file manager
     bat  # cat but with colours
     dust  # disk usage terminal utility
