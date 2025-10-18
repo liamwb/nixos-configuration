@@ -14,13 +14,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # configure  firefox
-  programs.firefox.nativeMessagingHosts.packages = [ pkgs.plasma-browser-integration ];  
-  environment.sessionVariables = {
-    MOZ_USE_XINPUT2 = "1";
-  };
-
-
   # fonts that support chinese 
   fonts.packages = with pkgs; [
     nerd-fonts.intone-mono

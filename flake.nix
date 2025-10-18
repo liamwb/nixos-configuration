@@ -22,11 +22,10 @@
   laptop-background = ./wallpapers/nixos-wallpaper-catppuccin-macchiato.png;
   in {
 
-    nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem { 
+    nixosConfigurations.thinkpad = inputs.nixpkgs.lib.nixosSystem { 
       system = "x86_64-linux";
       modules = [
-        ./hosts/liam-laptop-nixos/configuration.nix
-        nixos-hardware.nixosModules.dell-xps-15-9560
+        ./hosts/thinkpad/configuration.nix
         stylix.nixosModules.stylix
         base16.nixosModule
   
@@ -34,7 +33,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.liamwb = import ./hosts/liam-laptop-nixos/home.nix;
+          home-manager.users.liamwb = import ./hosts/thinkpad/home.nix;
           home-manager.backupFileExtension = "backup"; # create a backup on collision
           home-manager.sharedModules = [
             nixvim.homeModules.nixvim
@@ -91,6 +90,36 @@
 		nixvim.homeModules.nixvim
 		stylix.homeModules.stylix
 		];
+    };
+
+    nixosConfigurations.liam-laptop-nixos = inputs.nixpkgs.lib.nixosSystem { 
+      system = "x86_64-linux";
+      modules = [
+        ./hosts/liam-laptop-nixos/configuration.nix
+        nixos-hardware.nixosModules.dell-xps-15-9560
+        stylix.nixosModules.stylix
+        base16.nixosModule
+  
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.liamwb = import ./hosts/liam-laptop-nixos/home.nix;
+          home-manager.backupFileExtension = "backup"; # create a backup on collision
+          home-manager.sharedModules = [
+            nixvim.homeModules.nixvim
+          ];
+
+          # Optionally, use home-manager.extraSpecialArgs to pass
+          # arguments to home.nix
+          home-manager.extraSpecialArgs = {
+            inherit inputs laptop-background;
+          };
+        }
+      ];
+      specialArgs = {
+        inherit inputs laptop-background;
+      };
     };
   };
 }
