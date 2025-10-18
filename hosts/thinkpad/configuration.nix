@@ -31,7 +31,7 @@
     image = laptop-background;
     polarity = "dark";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/blueforest.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
   };
 
   # theme for SDDM
