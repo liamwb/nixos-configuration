@@ -17,7 +17,7 @@
         ];
         "image" = [
         {
-          run  = ''feh "$@"'';
+          run  = ''qimgv "$@"'';
           block = false;
         }
         ];

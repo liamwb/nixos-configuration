@@ -19,6 +19,12 @@
     shell = pkgs.fish;
   };
 
+  # enable opengpl and gpu drivers
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # enable stylix
   stylix = {
     enable = true;
