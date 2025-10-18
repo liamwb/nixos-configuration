@@ -54,7 +54,7 @@
     # -*- conf -*-
 
     shell=fish
-    font=monospace:size=12
+    font=IntoneMono NFP:size=12
   '';
 
 
