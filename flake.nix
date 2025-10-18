@@ -26,6 +26,7 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/thinkpad/configuration.nix
+        nixos-hardware.nixosModules.lenovo-thinkpad-t490
         stylix.nixosModules.stylix
         base16.nixosModule
   
