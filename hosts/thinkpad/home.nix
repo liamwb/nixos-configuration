@@ -40,7 +40,7 @@
     # -*- conf -*-
 
     shell=fish
-    font=monospace:size=14
+    font=IntoneMono NFP:size=14
   '';
 
   # This value determines the Home Manager release that your
