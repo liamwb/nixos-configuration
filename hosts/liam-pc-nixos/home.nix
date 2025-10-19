@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     steam
+    chromium
   ];
   
   wayland.windowManager.hyprland = {

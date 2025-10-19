@@ -64,7 +64,7 @@
 
   home.packages = with pkgs; [
     firefox
-    chromium
+    # chromium  # I don't want this on the phd machine because ubuntu sucks
     zotero 
     sage
     youtube-music
