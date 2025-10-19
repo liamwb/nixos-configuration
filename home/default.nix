@@ -65,7 +65,6 @@
   home.packages = with pkgs; [
     firefox
     chromium
-    thunderbird
     zotero 
     sage
     youtube-music
