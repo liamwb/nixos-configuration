@@ -316,6 +316,9 @@
         enable = true;
         settings.signs = true;
       };
+
+      #testing
+      noice.enable = true;
     };
 
 
