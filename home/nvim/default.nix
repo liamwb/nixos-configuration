@@ -318,7 +318,21 @@
       };
 
       #testing
-      noice.enable = true;
+  noice = {
+    enable = true;
+    settings.views = {
+          cmdline_popup = {
+            position = {
+              row = 30;
+              col = "50%";
+            };
+            size = {
+              width = 60;
+              height = "auto";
+            };
+          };
+            };
+        };
     };
 
 
