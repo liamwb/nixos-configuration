@@ -1,6 +1,10 @@
 {pkgs, ...}:
 {
   programs.nixvim = {
+
+    # for syntax_conceal
+    opts = { conceallevel = 2; }; 
+
     plugins.vimtex = {
       enable = true;
 
