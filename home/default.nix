@@ -69,7 +69,7 @@
     sage
     youtube-music
     vscode
-
+    packet  # quick share client
     fish # friendly shell
     # nerd-fonts.monaspace # nerd fonts for pretty shell
     # nerd-fonts.hack
@@ -115,7 +115,6 @@
 
     # photography
     qimgv
-    darktable
   
     # neovim
     luajitPackages.jsregexp  # dependency for LuaSnips
