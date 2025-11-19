@@ -71,9 +71,9 @@
     vscode
 
     fish # friendly shell
-    nerd-fonts.monaspace # nerd fonts for pretty shell
-    nerd-fonts.hack
-    nerd-fonts.jetbrains-mono
+    # nerd-fonts.monaspace # nerd fonts for pretty shell
+    # nerd-fonts.hack
+    # nerd-fonts.jetbrains-mono
     starship # terminal customisation
     foot  # terminal emulator
     #  steam don't include in phd machine so move to per-machine

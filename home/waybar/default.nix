@@ -23,7 +23,7 @@ in
 
     style = ''
 * {
-    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-family: Intone Mono;
     font-size: 16px;
 }
 
