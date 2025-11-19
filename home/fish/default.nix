@@ -18,7 +18,7 @@
         rm -f -- "$tmp"
       end
     '';
-    shellInitLast = "pokeget random --hide-name | fastfetch --file-raw -";
+    shellInitLast = "pokeget random --hide-name | fastfetch --file-raw - -c examples/10.jsonc";
   };
 
   programs.yazi.enableFishIntegration = true;
