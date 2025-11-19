@@ -74,7 +74,7 @@
             "format-charging": "󰂄  {capacity}%",
             "format-plugged": "  {capacity}%",
             "format-alt": "{time} {icon}",
-            "format-icons": ["", "", "", "", ""]
+            "format-icons": [" ", " ", " ", " ", " "]
         },
         "network": {
             "format-wifi": "  {signalStrength}%",
@@ -93,7 +93,7 @@
         },
         "pulseaudio": {
             "format": "{icon} {volume}%",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
+            "format-bluetooth": "{volume}% {icon}  {format_source}",
             "format-bluetooth-muted": " {icon} {format_source}",
             "format-muted": "  0%",
             "format-icons": {
