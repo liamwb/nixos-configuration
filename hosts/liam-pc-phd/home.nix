@@ -44,7 +44,7 @@ in
     # -*- conf -*-
 
     shell=fish
-    font=monospace:size=12
+    font=IntoneMono:size=12
   '';
 
   stylix = {
