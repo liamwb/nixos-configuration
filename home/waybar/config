@@ -92,7 +92,7 @@
             "format-connected": "󰂱 {status}"
         },
         "pulseaudio": {
-            "format": "{icon} {volume}%",
+            "format": "{icon}  {volume}%",
             "format-bluetooth": "{volume}% {icon}  {format_source}",
             "format-bluetooth-muted": " {icon} {format_source}",
             "format-muted": "  0%",
