@@ -61,6 +61,7 @@
   };
 
   # List services that you want to enable:
+  services.tailscale.enable = true;
 
   nix.optimise.automatic = true;
   nix.gc = {
