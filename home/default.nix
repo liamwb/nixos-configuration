@@ -146,6 +146,10 @@
     gnome-keyring
     seahorse
     libsecret
+
+    ## For ENG2005 Stack Work
+    maxima
+    wxmaxima
   ];
 
   home.shellAliases = {
