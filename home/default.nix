@@ -25,12 +25,14 @@
 
   programs.git = {
     enable = true;
-    userName = "liamwb";
-    userEmail = "liam.woodbaker@gmail.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "liamwb";
+        email = "liam.woodbaker@gmail.com";
+      };
       credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
+      pkgs.git.override { withLibsecret = true; }
+    }/bin/git-credential-libsecret";
     };
   };
 
@@ -131,7 +133,7 @@
     hyprlock
     hyprcursor
     waybar
-    rofi-wayland # up launcher
+    rofi # up launcher
     fuzzel  # another launcher
     networkmanagerapplet
     brightnessctl # for screen brightness
@@ -141,7 +143,6 @@
     libnotify
     wlogout
     grimblast
-    kdePackages.xwaylandvideobridge
 
     gnome-keyring
     seahorse

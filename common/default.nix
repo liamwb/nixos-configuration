@@ -18,10 +18,9 @@
   fonts.packages = with pkgs; [
     nerd-fonts.intone-mono
     noto-fonts 
-    noto-fonts-extra 
     noto-fonts-cjk-sans 
     noto-fonts-cjk-serif 
-    noto-fonts-emoji];
+    noto-fonts-color-emoji];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

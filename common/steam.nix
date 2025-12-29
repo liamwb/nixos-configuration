@@ -2,7 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     mangohud # system monitoring
-    protonup  # let's us install fancy proton
+    protonup-ng  # let's us install fancy proton
   ];
 
   programs.steam ={

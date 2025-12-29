@@ -10,7 +10,6 @@
   gparted
   devenv
   nix-search-cli
-  protonup
   openssl
 
   # android tools
