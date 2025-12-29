@@ -45,8 +45,6 @@
   kdePackages.okular
   nautilus
   evince  # for thumbnails in nautilus
-
-  inputs.ignis.packages.${system}.ignis
   ];
 
   # option for devenv

@@ -14,7 +14,7 @@
     stylix.url = "github:danth/stylix/release-25.05";
     base16.url = "github:SenchoPens/base16.nix";
 
-    ignis.url = "git+https://github.com/linkfrg/ignis?submodules=1";
+    # ignis.url = "git+https://github.com/linkfrg/ignis?submodules=1";
   };
 
   outputs = { self, nixpkgs, nixvim, stylix, nixos-hardware, home-manager, base16, ... } @ inputs: let
