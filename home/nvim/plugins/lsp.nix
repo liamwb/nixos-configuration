@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     # Dependencies
     #
@@ -13,8 +14,7 @@
       enable = true;
     };
 
-    plugins.ltex-extra.enable = true;  # adds support for more ltex functionality
-
+    plugins.ltex-extra.enable = true; # adds support for more ltex functionality
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
@@ -81,7 +81,7 @@
         # gopls = {
         #  enable = true;
         #}
-        # pylsp.enable = true;
+        pyright.enable = true;
 
         # handled by rustaceanvim now
 
@@ -105,7 +105,7 @@
           };
         };
 
-        nil_ls.enable = true;  # LSP for the nix language
+        nil_ls.enable = true; # LSP for the nix language
 
         # pyright.enable = true;
         # Some languages (like typscript) have entire language plugins that can be useful:
