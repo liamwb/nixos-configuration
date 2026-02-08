@@ -4,18 +4,21 @@
 { pkgs, laptop-background, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./../../common/default.nix
-      ./power-man.nix
-    ];
-
+  imports = [
+    ./hardware-configuration.nix
+    ./../../common/default.nix
+    ./power-man.nix
+  ];
 
   users.users.liamwb = {
     isNormalUser = true;
     description = "my default user";
-    extraGroups = [ "networkmanager" "wheel" "storage" "kvm" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "storage"
+      "kvm"
+    ];
     shell = pkgs.fish;
   };
 
@@ -97,7 +100,10 @@
   programs.hyprland.enable = true;
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-hyprland
+    pkgs.xdg-desktop-portal-gtk
+  ];
 
   ######### End SDDM, Hyprland ###########
 
@@ -116,7 +122,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -153,7 +158,7 @@
   # };
   #
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ 29999 ];
+  networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ 29999 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
