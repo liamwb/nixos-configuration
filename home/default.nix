@@ -4,7 +4,7 @@
 
   # This file controls all the home-manager stuff that is common to all my machines.
   imports = [
-    ./hypr 
+    ./hypr
     ./fish
     ./nvim
     ./zathura
@@ -14,7 +14,7 @@
     # ./rofi
     ./fuzzel
   ];
- 
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "liamwb";
@@ -30,9 +30,7 @@
         name = "liamwb";
         email = "liam.woodbaker@gmail.com";
       };
-      credential.helper = "${
-      pkgs.git.override { withLibsecret = true; }
-    }/bin/git-credential-libsecret";
+      credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
     };
   };
 
@@ -44,7 +42,7 @@
         exec = "handle-textedit %U";
         categories = [ "Application" ];
         mimeType = [ "x-textedit-handlet/textedit" ];
-        };
+      };
     };
 
     mimeApps.defaultApplications = {
@@ -54,10 +52,10 @@
   };
 
   home.sessionVariables = {
-    LYEDITOR= "nvr -s +:'dr %(file)s | call cursor(%(line)s,%(char)s+1)'";
+    LYEDITOR = "nvr -s +:'dr %(file)s | call cursor(%(line)s,%(char)s+1)'";
   };
 
-  fonts.fontconfig.enable = true;  # make fonts installed via HM discoverable
+  fonts.fontconfig.enable = true; # make fonts installed via HM discoverable
 
   # disable stylix for waybar since I have a custom module
   stylix.targets.waybar.enable = false;
@@ -67,28 +65,28 @@
   home.packages = with pkgs; [
     firefox
     # chromium  # I don't want this on the phd machine because ubuntu sucks
-    zotero 
+    zotero
     sage
     youtube-music
     vscode
-    packet  # quick share client
+    packet # quick share client
     fish # friendly shell
     # nerd-fonts.monaspace # nerd fonts for pretty shell
     # nerd-fonts.hack
     # nerd-fonts.jetbrains-mono
     starship # terminal customisation
-    foot  # terminal emulator
+    foot # terminal emulator
     #  steam don't include in phd machine so move to per-machine
-    discord
+    vesktop # discord
     fastfetch
-    pokeget-rs  # important for drip
+    pokeget-rs # important for drip
     lsd # ls with icons
     teams-for-linux
     onedrive
     openvpn
     android-studio
     texlive.combined.scheme-full
-    inkscape  # required for including svgs in latex documents
+    inkscape # required for including svgs in latex documents
     cava # music visualisation
     nvtopPackages.full # gpu utilisation info
     fzf
@@ -98,31 +96,31 @@
     slack
     jellyfin-media-player
     zoom-us
-    yazi  # terminal file manager
-    bat  # cat but with colours
-    dust  # disk usage terminal utility
+    yazi # terminal file manager
+    bat # cat but with colours
+    dust # disk usage terminal utility
     # ncspot  # terminal spotify client (requires premium)
-    porsmo  # terminal pomodoro timer
-    wiki-tui  # wikipedia tui
-    tldr  # tldr for man pages
+    porsmo # terminal pomodoro timer
+    wiki-tui # wikipedia tui
+    tldr # tldr for man pages
     obs-studio
-    zathura  # pdf viewer
-    base16-schemes  # collection of colour schemes
-    bottom  # perfomance info
-    warp-terminal  # grant's malware
-    smassh  # monkeytype tui
-    libreoffice-qt6-still  # libreoffice that doesn't look like shite
+    zathura # pdf viewer
+    base16-schemes # collection of colour schemes
+    bottom # perfomance info
+    warp-terminal # grant's malware
+    smassh # monkeytype tui
+    libreoffice-qt6-still # libreoffice that doesn't look like shite
     telegram-desktop
     easyeffects
 
     # photography
     qimgv
-  
+
     # neovim
-    luajitPackages.jsregexp  # dependency for LuaSnips
-    fd  # like find, nvim wants it
-    neovim-remote  # nvr for point-and-click with lilypond-suite
-    nil  # nix language server for nix ide    
+    luajitPackages.jsregexp # dependency for LuaSnips
+    fd # like find, nvim wants it
+    neovim-remote # nvr for point-and-click with lilypond-suite
+    nil # nix language server for nix ide
     nvd
 
     # packages for hyprland
@@ -134,10 +132,10 @@
     hyprcursor
     waybar
     rofi # up launcher
-    fuzzel  # another launcher
+    fuzzel # another launcher
     networkmanagerapplet
     brightnessctl # for screen brightness
-    blueman #  bluetooth
+    blueman # bluetooth
     pavucontrol # auio controller?
     mako
     libnotify
