@@ -115,6 +115,7 @@
 
     # photography
     qimgv
+    rapidraw # raw editor
 
     # neovim
     luajitPackages.jsregexp # dependency for LuaSnips
