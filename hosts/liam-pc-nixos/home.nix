@@ -1,20 +1,20 @@
-{pkgs, pc-background, ... }:
+{ pkgs, pc-background, ... }:
 
 {
   imports = [
-    ./../../home/default.nix 
+    ./../../home/default.nix
   ];
 
   home.packages = with pkgs; [
     steam
     chromium
   ];
-  
+
   wayland.windowManager.hyprland = {
     settings = {
       monitor = [
-        "DP-1, 1920x1080@60, 0x0, 1"
-        "DP-3, 1920x1080@165, 1920x0, 1"
+        "DP-3, 1920x1080@60, 0x0, 1"
+        "DP-1, 1920x1080@165, 1920x0, 1"
       ];
 
       # this doesn't work for some reason so we use extraConfig
@@ -39,10 +39,10 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = ["${pc-background}"];
-      wallpaper = [ 
-      "DP-2,${pc-background}"
-      "DP-3,${pc-background}"
+      preload = [ "${pc-background}" ];
+      wallpaper = [
+        "DP-2,${pc-background}"
+        "DP-3,${pc-background}"
       ];
     };
   };
@@ -57,7 +57,6 @@
     shell=fish
     font=IntoneMono NFP:size=12
   '';
-
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
