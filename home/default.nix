@@ -105,6 +105,7 @@
     tldr # tldr for man pages
     obs-studio
     zathura # pdf viewer
+    pdfarranger
     base16-schemes # collection of colour schemes
     bottom # perfomance info
     warp-terminal # grant's malware
