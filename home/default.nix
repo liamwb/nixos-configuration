@@ -148,6 +148,8 @@
     seahorse
     libsecret
 
+    opencode # it's a fun free AI agent
+
     ## For ENG2005 Stack Work
     maxima
     wxmaxima
