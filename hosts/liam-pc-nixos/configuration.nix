@@ -3,18 +3,18 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { pkgs, pc-background, ... }:
-let 
+let
   alpacaAccel = pkgs.alpaca.override {
     ollama = pkgs.ollama-rocm;
   };
 in
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./../../common
-      ./mount-drives.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./../../common
+    ./mount-drives.nix
+  ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -38,7 +38,7 @@ in
   time.hardwareClockInLocalTime = true;
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n.defaultLocale = "en_AU.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_AU.UTF-8";
@@ -62,8 +62,11 @@ in
   users.users.liamwb = {
     isNormalUser = true;
     description = "Liam Wood-Baker";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -102,7 +105,10 @@ in
   programs.hyprland.enable = true;
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-hyprland
+    pkgs.xdg-desktop-portal-gtk
+  ];
 
   ######### End SDDM, Hyprland ###########
 
@@ -122,14 +128,13 @@ in
     #media-session.enable = true;
   };
 
-
   ### Gaming Stuff ##
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
 
-  services.xserver.videoDrivers = ["amdgpu"];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   ### End Gaming Stuff ###
 
