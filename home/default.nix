@@ -111,6 +111,7 @@
     warp-terminal # grant's malware
     smassh # monkeytype tui
     libreoffice-qt6-still # libreoffice that doesn't look like shite
+    scribus
     telegram-desktop
     easyeffects
 
