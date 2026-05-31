@@ -1,26 +1,21 @@
-{ config, pkgs, lib, ... }:
-let 
-  alpacaAccel = pkgs.alpaca.override {
-    ollama = pkgs.ollama-rocm;
-  };
-in
 {
-
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
   imports = [ ./../../home/default.nix ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = lib.mkForce "phduser";  # all other machines the username is liamwb
-  home.homeDirectory = lib.mkForce "/home/phduser";  # all other machines the directory is /home/liamwb
+  home.username = lib.mkForce "phduser"; # all other machines the username is liamwb
+  home.homeDirectory = lib.mkForce "/home/phduser"; # all other machines the directory is /home/liamwb
 
   # path fuckery for ubuntu + hyprland
   home.sessionPath = [
     "/nix/var/nix/profiles/default/bin"
     "/home/phduser/.nix-profile/bin"
-  ];
-
-  home.packages = [
-    alpacaAccel
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -35,9 +30,8 @@ in
   # The home.packages option allows you to install Nix packages into your
   # environment.
   nixpkgs.config = {
-	  allowUnfree = true;
+    allowUnfree = true;
   };
-
 
   # set the font size and shell for foot (per-host because I want different font sizes on different hosts)
   xdg.configFile."foot/foot.ini".text = ''
@@ -56,15 +50,15 @@ in
 
   wayland.windowManager.hyprland.settings = {
     # the version of hyprland in apt for ubuntu does not support the decoration:shadow option
-    decoration = lib.mkForce {};
+    decoration = lib.mkForce { };
 
-    monitor =[
-    "DP-6,1920x1080@60,1920x0,1"
-    "DP-8,1920x1080@60,0x0,1"
-    " , preferred, auto, 1"  # add other monitors to the right at default res
+    monitor = [
+      "DP-6,1920x1080@60,1920x0,1"
+      "DP-8,1920x1080@60,0x0,1"
+      " , preferred, auto, 1" # add other monitors to the right at default res
     ];
 
-    env = [ 
+    env = [
       "PATH,/nix/var/nix/profiles/default/bin:/home/phduser/.nix-profile/bin:$PATH"
     ];
   };

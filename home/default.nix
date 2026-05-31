@@ -3,6 +3,7 @@
 {
 
   # This file controls all the home-manager stuff that is common to all my machines.
+
   imports = [
     ./hypr
     ./fish
@@ -66,8 +67,8 @@
     firefox
     # chromium  # I don't want this on the phd machine because ubuntu sucks
     zotero
-    sage
-    youtube-music
+    # sage
+    pear-desktop
     vscode
     packet # quick share client
     fish # friendly shell
@@ -159,5 +160,7 @@
   home.shellAliases = {
     ls = "lsd";
   };
+
+  gtk.gtk4.theme = null; # new default
 
 }

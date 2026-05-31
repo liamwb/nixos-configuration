@@ -1,50 +1,51 @@
 {
   programs.yazi = {
+    shellWrapperName = "yy"; # it's what I'm used to
     enable = true;
     settings = {
       opener = {
         "text" = [
-        {
-          run = ''nvim "$@"'';
-          block = true;
-        }
+          {
+            run = ''nvim "$@"'';
+            block = true;
+          }
         ];
         "video" = [
-        {
-          run  = ''vlc "$@"'';
-          block = false;
-        }
+          {
+            run = ''vlc "$@"'';
+            block = false;
+          }
         ];
         "image" = [
-        {
-          run  = ''qimgv "$@"'';
-          block = false;
-        }
+          {
+            run = ''qimgv "$@"'';
+            block = false;
+          }
         ];
         "pdf" = [
-        {
-          run  = ''zathura "$@"'';
-          block = false;
-        }
+          {
+            run = ''zathura "$@"'';
+            block = false;
+          }
         ];
       };
       open.prepend_rules = [
-      {
-        mime = "text/*";
-        use  = "text";
-      }
-      {
-        mime = "image/*";
-        use  = "image";
-      }
-      {
-        mime = "video/*";
-        use  = "video";
-      }
-      {
-        mime = "application/pdf";
-        use  = "pdf";
-      }
+        {
+          mime = "text/*";
+          use = "text";
+        }
+        {
+          mime = "image/*";
+          use = "image";
+        }
+        {
+          mime = "video/*";
+          use = "video";
+        }
+        {
+          mime = "application/pdf";
+          use = "pdf";
+        }
       ];
     };
   };

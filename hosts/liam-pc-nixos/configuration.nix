@@ -1,13 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { pkgs, pc-background, ... }:
-let
-  alpacaAccel = pkgs.alpaca.override {
-    ollama = pkgs.ollama-rocm;
-  };
-in
 {
   imports = [
     # Include the results of the hardware scan.
@@ -80,7 +71,6 @@ in
         showSessionsByDefault = "true";
       };
     })
-    alpacaAccel
   ];
 
   # enable stylix
@@ -90,9 +80,6 @@ in
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   };
-
-  # This is for hardware accelerated local LLMs
-  services.ollama.acceleration = "rocm";
 
   ######### Enable SDDM, Hyprland ###########
   services.xserver.enable = true;

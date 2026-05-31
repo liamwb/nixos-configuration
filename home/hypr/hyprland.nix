@@ -8,6 +8,8 @@ in
 
   wayland.windowManager.hyprland = {
 
+    configType = "hyprlang";
+
     enable = true;
 
     settings = {
@@ -104,7 +106,7 @@ in
 
       # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
       dwindle = {
-        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below;
+        # pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below;
         preserve_split = true; # You probably want this
         special_scale_factor = 0.8;
       };
@@ -174,7 +176,7 @@ in
         "${mainMod}, F, togglefloating,"
         # "${mainMod}, R, exec, $menu"
         "${mainMod}, P, pseudo, " # dwindle
-        "${mainMod}, J, togglesplit, " # dwindle
+        "${mainMod}, J,layoutmsg , togglesplit, " # dwindle
 
         # Move focus with mainMod + arrow keys
         "${mainMod}, left, movefocus, l"
@@ -258,34 +260,26 @@ in
       # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
 
       # Example windowrule v1
-      # windowrule = float, ^(kitty)$
+      # windowrule = float on, ^(kitty)$
 
-      # Example windowrule v2
-      # "float,class:^(kitty)$,title:^(kitty)$"
-      windowrulev2 = [
-        "suppressevent maximize, class:.*" # You'll probably like this.
+      windowrule = [
+        "suppress_event maximize, match:class .*" # You'll probably like this.
 
         # make waybar applets open as windows
-        "float,class:(blueman-manager-wrapped|nm-connection-editor|pavucontrol)"
-
-        # Thunderbird pop-up windows
-        "float,class:^(thunderbird)$,title:^(New Event:|Edit Item)$"
+        "float on, match:class (blueman-manager-wrapped|nm-connection-editor|pavucontrol)"
 
         # wifi menu with rofi (or anything rofi for that matter) should not tile
-        "float,class:Rofi"
+        "float on, match:class Rofi"
+
         # openssh authentication should float
-        "float,class:OpenSSH Authentication Passphrase request"
-        "float,class:org.kde.kwalletmanager5"
+        "float on, match:class OpenSSH Authentication Passphrase request"
+        "float on, match:class org.kde.kwalletmanager5"
 
         # matplotlib should float
-        "float,class:Matplotlib"
+        "float on, match:class Matplotlib"
 
         # fix to allow XWayland to share windows with Wayland
-        "opacity 0.0 override,class:^(xwaylandvideobridge)$"
-        "noanim,class:^(xwaylandvideobridge)$"
-        "noinitialfocus,class:^(xwaylandvideobridge)$"
-        "maxsize 1 1,class:^(xwaylandvideobridge)$"
-        "noblur,class:^(xwaylandvideobridge)$"
+        "opacity 0.0 override, no_anim on, no_initial_focus on, max_size 1 1, no_blur on, match:class ^(xwaylandvideobridge)$"
       ];
     };
   };
