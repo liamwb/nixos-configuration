@@ -15,7 +15,7 @@
       vim.api.nvim_create_autocmd( 'FileType', { pattern = 'tex',
         callback = function(ev)
           vim.treesitter.stop(ev.buf)
-          vim.bo[ev.buf].indentexpr = nil
+          vim.bo[ev.buf].indentexpr = "VimtexIndentExpr()"
         end
       })
     '';
