@@ -32,6 +32,7 @@
 
   stylix = {
     targets = {
+      kde.enable = false;
       # zathura.enable = false;
     };
   };

@@ -27,7 +27,7 @@ in
       env = [
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
-        "QT_QPA_PLATFORMTHEME,qt5ct" # enable qt5ct theming, kvantum
+        # "QT_QPA_PLATFORMTHEME,qt5ct" # enable qt5ct theming, kvantum
         "QT_QPA_PLATFORM=wayland;xcb" # tell QT apps to use wayland first
       ];
 
