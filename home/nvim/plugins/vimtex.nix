@@ -19,6 +19,7 @@
 
         quickfix_mode = 0; # don't open the quick fix menu by default
 
+        indent_enabled = 1;
         indent_on_ampersands = 0; # can't believe anyone wants this
 
         view_method = "zathura";

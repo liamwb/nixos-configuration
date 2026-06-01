@@ -14,7 +14,10 @@
       enable = true;
     };
 
-    plugins.ltex-extra.enable = true; # adds support for more ltex functionality
+    plugins.ltex-extra = {
+      enable = true; # adds support for more ltex functionality
+      autoLoad = true;
+    };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
