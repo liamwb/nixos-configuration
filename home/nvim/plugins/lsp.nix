@@ -17,6 +17,9 @@
     plugins.ltex-extra = {
       enable = true; # adds support for more ltex functionality
       autoLoad = true;
+      settings = {
+        load_langs = [ "en-AU" ];
+      };
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
