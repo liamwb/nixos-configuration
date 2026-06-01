@@ -115,6 +115,7 @@
     scribus
     telegram-desktop
     easyeffects
+    calibre # ebooks
 
     # photography
     qimgv
