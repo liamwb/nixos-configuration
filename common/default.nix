@@ -1,4 +1,4 @@
-{config, pkgs, ...} :
+{ config, pkgs, ... }:
 {
 
   # This file controls system-wide options and packages that are common to all of my machines
@@ -8,19 +8,23 @@
     ./system-packages.nix
     ./steam.nix
   ];
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # fonts that support chinese 
+  # fonts that support chinese
   fonts.packages = with pkgs; [
     nerd-fonts.intone-mono
-    noto-fonts 
-    noto-fonts-cjk-sans 
-    noto-fonts-cjk-serif 
-    noto-fonts-color-emoji];
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+    noto-fonts-color-emoji
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -40,19 +44,19 @@
   programs.seahorse.enable = true;
 
   # enable hyprlock to perform authentication
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
   ######### End Security ########
 
   # Input manager
   i18n.inputMethod = {
     type = "fcitx5";
-    fcitx5.addons = with pkgs; [ fcitx5-chinese-addons  ];
+    fcitx5.addons = with pkgs; [ fcitx5-chinese-addons ];
   };
 
   # Enable bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  services.blueman.enable = true;  # provides blueman-applet and blueman-manager
+  services.blueman.enable = true; # provides blueman-applet and blueman-manager
 
   # configure fish
   programs.fish = {
@@ -71,7 +75,9 @@
 
   # automount/unmount drives
   services.devmon.enable = true;
-  services.gvfs.enable = true; 
+  services.gvfs.enable = true;
   services.udisks2.enable = true;
+
+  stylix.targets.kmscon.enable = false; # this was bugged & I don't use it
 
 }
