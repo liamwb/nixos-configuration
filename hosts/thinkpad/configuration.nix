@@ -63,7 +63,8 @@
   networking.networkmanager.wifi.powersave = false;
 
   # Set your time zone.
-  time.timeZone = "Australia/Melbourne";
+  # time.timeZone = "Australia/Melbourne";
+  services.automatic-timezoned.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_AU.UTF-8";
