@@ -162,6 +162,4 @@
     ls = "lsd";
   };
 
-  gtk.gtk4.theme = null; # new default
-
 }
