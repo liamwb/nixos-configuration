@@ -7,6 +7,7 @@
     ./rofi-wifi-menu/rofi-wifi-menu.nix
     ./system-packages.nix
     ./steam.nix
+    ./katrain
   ];
 
   nix.settings.experimental-features = [
