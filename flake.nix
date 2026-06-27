@@ -15,7 +15,10 @@
 
     base16.url = "github:SenchoPens/base16.nix";
 
-    # ignis.url = "git+https://github.com/linkfrg/ignis?submodules=1";
+    # optional, but recommended if you closely follow NixOS unstable so it shares
+    # system libraries, and improves startup time
+    zen-browser.url = "github:youwen5/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
