@@ -266,7 +266,7 @@ in
         "suppress_event maximize, match:class .*" # You'll probably like this.
 
         # make waybar applets open as windows
-        "float on, match:class (blueman-manager-wrapped|nm-connection-editor|pavucontrol)"
+        "float on, match:class (.blueman-manager-wrapped|org.pulseaudio.pavucontrol)"
 
         # wifi menu with rofi (or anything rofi for that matter) should not tile
         "float on, match:class Rofi"
