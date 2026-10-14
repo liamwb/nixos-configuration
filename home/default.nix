@@ -84,6 +84,7 @@
     pokeget-rs # important for drip
     lsd # ls with icons
     teams-for-linux
+    signal-desktop
     onedrive
     openvpn
     android-studio
