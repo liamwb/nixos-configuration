@@ -2,7 +2,7 @@
 let
   mainMod = "SUPER";
   terminal = "foot";
-  browser = "firefox";
+  browser = "zen";
 in
 {
 
