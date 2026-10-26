@@ -1,8 +1,8 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   # cursor settings
   home.pointerCursor = {
-    gtk.enable = true;
+    enable = true;
     name = "Vanilla-DMZ";
     package = pkgs.vanilla-dmz;
     hyprcursor = {

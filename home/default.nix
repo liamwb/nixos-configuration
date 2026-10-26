@@ -71,6 +71,7 @@
     # sage
     pear-desktop
     vscode
+    ookla-speedtest # cli speedtest
     packet # quick share client
     fish # friendly shell
     # nerd-fonts.monaspace # nerd fonts for pretty shell

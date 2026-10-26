@@ -14,7 +14,6 @@
     "nix-command"
     "flakes"
   ];
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -46,6 +45,12 @@
 
   # enable hyprlock to perform authentication
   security.pam.services.hyprlock = { };
+
+  # This firefox package is used by zotero?
+  nixpkgs.config.permittedInsecurePackages = [
+    "firefox-esr-140-bin-unwrapped-140.17.0esr"
+  ];
+
   ######### End Security ########
 
   # Input manager
