@@ -6,25 +6,25 @@
       opener = {
         "text" = [
           {
-            run = ''nvim "$@"'';
+            run = ''nvim "%s"'';
             block = true;
           }
         ];
         "video" = [
           {
-            run = ''vlc "$@"'';
+            run = ''vlc "%s"'';
             block = false;
           }
         ];
         "image" = [
           {
-            run = ''qimgv "$@"'';
+            run = ''qimgv "%s"'';
             block = false;
           }
         ];
         "pdf" = [
           {
-            run = ''zathura "$@"'';
+            run = ''zathura "%s"'';
             block = false;
           }
         ];
