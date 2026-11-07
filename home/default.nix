@@ -90,7 +90,7 @@
     openvpn
     android-studio
     texliveFull
-    inkscape # required for including svgs in latex documents
+    # inkscape # required for including svgs in latex documents
     cava # music visualisation
     nvtopPackages.full # gpu utilisation info
     fzf
@@ -114,7 +114,7 @@
     bottom # perfomance info
     warp-terminal # grant's malware
     smassh # monkeytype tui
-    libreoffice-qt6-still # libreoffice that doesn't look like shite
+    libreoffice-qt # libreoffice that doesn't look like shite
     scribus
     telegram-desktop
     easyeffects

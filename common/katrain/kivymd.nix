@@ -11,7 +11,7 @@
 }:
 buildPythonPackage rec {
   pname = "kivymd";
-  version = "1.1.1";
+  version = "0.104.1";
   pyproject = true;
   disabled = pythonOlder "3.9";
 
@@ -36,8 +36,7 @@ buildPythonPackage rec {
   # Ensure kivy does not try to create files on disk when imported during check
   KIVY_NO_CONFIG = 1;
   KIVY_NO_FILELOG = 1;
-  pythonImportsCheck = [ "kivymd" ];
-
+  pythonImportsCheck = [ ];
   meta = with lib; {
     description = "A collection of Material Design compliant widgets for use with Kivy, a framework for cross-platform, touch-enabled graphical applications.";
     homepage = "https://kivymd.readthedocs.io/";

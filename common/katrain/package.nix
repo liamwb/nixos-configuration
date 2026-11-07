@@ -22,6 +22,10 @@ buildPythonApplication rec {
   version = "v1.17.1.1";
   pyproject = true;
 
+  pythonRelaxDeps = [
+    "chardet"
+  ];
+
   src = fetchFromGitHub {
     owner = "sanderland";
     repo = "katrain";
