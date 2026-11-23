@@ -63,7 +63,7 @@
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   stylix.targets.hyprlock.enable = false;
-  stylix.targets.wayprompt.enable = false;
+  stylix.targets.wayprompt.enable = false; # this one removed from Nixpkgs
 
   home.packages = with pkgs; [
     firefox
