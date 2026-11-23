@@ -63,6 +63,7 @@
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   stylix.targets.hyprlock.enable = false;
+  stylix.targets.wayprompt.enable = false;
 
   home.packages = with pkgs; [
     firefox
