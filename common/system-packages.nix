@@ -38,7 +38,6 @@
     ripgrep
     luajitPackages.luarocks
     lua
-    tree-sitter
     cargo
     go
     kdePackages.okular

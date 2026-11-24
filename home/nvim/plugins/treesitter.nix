@@ -19,5 +19,8 @@
         end
       })
     '';
+
+    # health check cries at me
+    dependencies.tree-sitter.enable = true;
   };
 }
