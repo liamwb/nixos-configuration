@@ -318,24 +318,38 @@
       };
 
       #testing
-  noice = {
-    enable = true;
-    settings.views = {
-          cmdline_popup = {
-            position = {
-              row = 30;
-              col = "50%";
-            };
-            size = {
-              width = 60;
-              height = "auto";
+      noice = {
+        enable = true;
+
+        settings = {
+          routes = [
+            {
+              filter = {
+                event = "lsp";
+                kind = "progress";
+                find = "ltex";
+              };
+
+              opts = {
+                skip = true;
+              };
+            }
+          ];
+          views = {
+            cmdline_popup = {
+              position = {
+                row = 30;
+                col = "50%";
+              };
+              size = {
+                width = 60;
+                height = "auto";
+              };
             };
           };
-            };
         };
+      };
     };
-
-
 
     # # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
     # extraPlugins = with pkgs.vimPlugins; [
@@ -366,7 +380,7 @@
         end,
       })
 
-      '';
+    '';
 
     extraFiles = {
       "ftplugin/rust.lua".text = ''
@@ -407,6 +421,12 @@
       -- vim: ts=2 sts=2 sw=2 et
     '';
 
-    extraPython3Packages = p: [p.numpy p.matplotlib p.progress p.tqdm p.debugpy ];
+    extraPython3Packages = p: [
+      p.numpy
+      p.matplotlib
+      p.progress
+      p.tqdm
+      p.debugpy
+    ];
   };
 }

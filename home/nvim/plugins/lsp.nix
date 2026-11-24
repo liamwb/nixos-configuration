@@ -8,17 +8,6 @@
       enable = true;
     };
 
-    # Useful status updates for LSP.
-    # https://nix-community.github.io/nixvim/plugins/fidget/index.html
-    plugins.fidget = {
-      enable = true;
-      settings = {
-        progress = {
-          suppress_on_insert = false;
-        };
-      };
-    };
-
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
       # NOTE: This is how you would ad a vim plugin that is not implemented in Nixvim, also see extraConfigLuaPre below
