@@ -12,6 +12,11 @@
     # https://nix-community.github.io/nixvim/plugins/fidget/index.html
     plugins.fidget = {
       enable = true;
+      settings = {
+        progress = {
+          suppress_on_insert = false;
+        };
+      };
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
