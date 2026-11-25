@@ -53,6 +53,7 @@
     # If you're wondering about lsp vs treesitter, you can check out the wonderfully
     # and elegantly composed help section, `:help lsp-vs-treesitter`
     #
+
     # https://nix-community.github.io/nixvim/plugins/lsp/index.html
     plugins.lsp = {
       enable = true;
@@ -75,55 +76,32 @@
         #}
         pyright.enable = true;
 
-        # handled by rustaceanvim now
+        # rust handled by rustaceanvim now
 
-        # rust_analyzer = {
-        #   enable = true;
-        #   installCargo = true;
-        #   installRustc = true;
-        # };
-        # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
-        #
         docker_compose_language_service = {
           enable = true;
         };
 
         # ltex_plus replaces ltex (now abandonded :( )
-        ltex_plus = {
-          enable = true;
-
-          settings = {
-            language = "en-AU";
-            checkFrequency = "save";
-          };
-        };
+        # can't get dicts working properly so I will come back to this later
+        # ltex_plus = {
+        #   enable = true;
+        #
+        #   settings = {
+        #     language = "en-AU";
+        #     checkFrequency = "save";
+        #   };
+        # };
 
         nil_ls.enable = true; # LSP for the nix language
-
-        # pyright.enable = true;
-        # Some languages (like typscript) have entire language plugins that can be useful:
-        #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
-        #
-        # But for many setups the LSP (`tsserver`) will work just fine
-        # tsserver = {
-        #  enable = true;
-        #}
 
         lua_ls = {
           enable = true;
 
-          # cmd = {
-          #};
-          # filetypes = {
-          #};
           settings = {
             completion = {
               callSnippet = "Replace";
             };
-            #diagnostics = {
-            #  disable = {
-            #    "missing-fields";
-            #};
           };
         };
         html.enable = true;
